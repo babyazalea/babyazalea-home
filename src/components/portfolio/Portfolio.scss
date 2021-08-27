@@ -1,0 +1,17 @@
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    font-size: 3rem;
+  }
+
+  i.fa-react {
+    font-weight: bold;
+    color: #61dafb;
+  }
+
+  .firebase-logo {
+    width: 2rem;
+  }
+}

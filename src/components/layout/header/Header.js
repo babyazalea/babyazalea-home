@@ -9,7 +9,7 @@ const Header = () => {
     <header>
       <div>
         <div>
-          <Link to="/">만든 것들</Link>
+          <Link to="/portfolios">만든 것들</Link>
         </div>
         <div>
           <Link to="/">
@@ -17,7 +17,7 @@ const Header = () => {
           </Link>
         </div>
         <div>
-          <Link to="/">읽을 거리</Link>
+          <Link to="/reading">읽을 거리</Link>
         </div>
       </div>
     </header>

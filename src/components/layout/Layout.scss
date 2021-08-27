@@ -1,3 +1,5 @@
+@import url("../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+
 .layout {
   width: 100%;
   height: 100vh;
@@ -9,12 +11,5 @@
   a {
     text-decoration: none;
     color: inherit;
-  }
-
-  main {
-    width: 80%;
-    height: 80%;
-    border: 1px solid #000;
-    margin-top: 30px;
   }
 }
