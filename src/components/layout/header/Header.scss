@@ -25,11 +25,13 @@ header {
     div:first-child {
       border-bottom-left-radius: 13px;
       border-top-left-radius: 13px;
+      border-right: none;
     }
 
     div:last-child {
       border-bottom-right-radius: 13px;
       border-top-right-radius: 13px;
+      border-left: none;
     }
 
     div:nth-child(2) {
@@ -38,14 +40,14 @@ header {
       transform: translateX(-50%);
       width: 50px;
       height: 50px;
-      background-color: #f5e3e3;
+      background-color: #ebecee;
       border-radius: 50%;
       z-index: 3;
       a {
         img {
           width: 60%;
           height: 60%;
-          opacity: 0.7;
+          opacity: 0.6;
         }
       }
     }
