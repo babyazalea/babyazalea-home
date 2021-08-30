@@ -11,6 +11,7 @@ const Category = (props) => {
           <Skill skill={skill} key={index} />
         ))}
       </div>
+      <span className="category-message">다음 스킬에 따라 분류합니다:</span>
       <div className="selected"></div>
     </div>
   );

@@ -8,7 +8,16 @@ const Card = (props) => {
     cardClassName = `card ${props.customClassName}`;
   }
 
-  return <div className={cardClassName}>{props.children}</div>;
+  let bgColor;
+  if (props.bgColor) {
+    bgColor = props.bgColor;
+  }
+
+  return (
+    <div className={cardClassName} style={{ backgroundColor: bgColor }}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Card;

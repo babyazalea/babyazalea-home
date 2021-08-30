@@ -3,7 +3,6 @@
   top: 10px;
   left: 50px;
   justify-self: flex-end;
-  border: 1px solid #000;
   width: 80%;
   height: 20%;
   display: flex;
@@ -17,6 +16,8 @@
   }
   .none-selected {
     width: 100%;
-    border: 1px solid red;
+  }
+  .category-message {
+    margin-top: 10px;
   }
 }

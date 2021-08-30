@@ -3,9 +3,8 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-
     div {
-      border: 1px solid var(--material-grey-color300);
+      border: 1px solid var(--grey-color300);
       a {
         display: flex;
         justify-content: center;
@@ -19,7 +18,8 @@ header {
     div:last-child {
       width: 130px;
       height: 30px;
-      color: var(--material-grey-color500);
+      color: var(--grey-color500);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
 
     div:first-child {
@@ -40,9 +40,10 @@ header {
       transform: translateX(-50%);
       width: 50px;
       height: 50px;
-      background-color: var(--material-grey-color200);
+      background-color: var(--beige-color);
       border-radius: 50%;
       z-index: 3;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       a {
         img {
           width: 60%;
