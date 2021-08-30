@@ -5,7 +5,7 @@ header {
     align-items: center;
 
     div {
-      border: 1px solid rgba(0, 0, 0, 0.09);
+      border: 1px solid var(--material-grey-color300);
       a {
         display: flex;
         justify-content: center;
@@ -19,7 +19,7 @@ header {
     div:last-child {
       width: 130px;
       height: 30px;
-      color: rgba(0, 0, 0, 0.5);
+      color: var(--material-grey-color500);
     }
 
     div:first-child {
@@ -40,7 +40,7 @@ header {
       transform: translateX(-50%);
       width: 50px;
       height: 50px;
-      background-color: #ebecee;
+      background-color: var(--material-grey-color200);
       border-radius: 50%;
       z-index: 3;
       a {
