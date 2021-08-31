@@ -1,7 +1,8 @@
 import React from "react";
-import Category from "../components/category/Category";
+
+import Sorting from "../components/sorting/Sorting";
 import Layout from "../components/layout/Layout";
-import Portfolio from "../components/portfolio/Portfolio";
+import PortfolioList from "../components/portfolio-list/PortfolioList";
 
 const Portfolios = () => {
   const portfolios = [
@@ -37,12 +38,8 @@ const Portfolios = () => {
 
   return (
     <Layout customClassName="portfolios">
-      <Category skills={removeDuplicateSkill} />
-      <div className="portfolios-wrapper">
-        {portfolios.map((portfolio, index) => (
-          <Portfolio portfolio={portfolio} key={index} />
-        ))}
-      </div>
+      <Sorting skills={removeDuplicateSkill} />
+      <PortfolioList portfolios={portfolios} />
     </Layout>
   );
 };

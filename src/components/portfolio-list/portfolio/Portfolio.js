@@ -1,7 +1,7 @@
 import React from "react";
 
-import Card from "../ui/card/Card";
-import firebaseLogo from "../../images/logos/firebase.svg";
+import Card from "../../ui/card/Card";
+import firebaseLogo from "../../../images/logos/firebase.svg";
 import "./Portfolio.scss";
 
 const Portfolio = (props) => {

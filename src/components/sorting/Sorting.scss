@@ -1,0 +1,23 @@
+.sorting {
+  position: sticky;
+  top: 10px;
+  left: 50px;
+  justify-self: flex-end;
+  width: 80%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    .skill:not(:last-child) {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+  .none-selected {
+    width: 100%;
+  }
+  .sorting-message {
+    margin-top: 10px;
+  }
+}
