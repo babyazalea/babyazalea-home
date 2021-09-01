@@ -51,7 +51,7 @@ const Portfolio = (props) => {
             {props.portfolio.skills.map((skill, index) => {
               if (skill === "firebase") {
                 return (
-                  <div className="skill-icon">
+                  <div className="skill-icon" key={index}>
                     <img
                       src={firebaseLogo}
                       alt="firebase logo"
@@ -62,8 +62,8 @@ const Portfolio = (props) => {
                 );
               }
               return (
-                <div className="skill-icon">
-                  <i className={`fab fa-${skill}`} key={index}></i>
+                <div className="skill-icon" key={index}>
+                  <i className={`fab fa-${skill}`}></i>
                 </div>
               );
             })}

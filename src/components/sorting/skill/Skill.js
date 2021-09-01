@@ -1,7 +1,5 @@
 import React from "react";
 
-import Card from "../../ui/card/Card";
-
 import "./Skill.scss";
 
 const Skill = (props) => {
@@ -18,11 +16,7 @@ const Skill = (props) => {
     }
   };
 
-  return (
-    <div className="skill">
-      <Card>{skillNameConverter(props.skill)}</Card>
-    </div>
-  );
+  return <div className="skill">{skillNameConverter(props.skill)}</div>;
 };
 
 export default Skill;

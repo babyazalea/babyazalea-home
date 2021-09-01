@@ -1,6 +1,19 @@
 .post-list {
-  display: flex;
   width: 80%;
   height: 100%;
   border: 1px solid green;
+  ul,
+  li {
+    list-style: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    width: 100%;
+  }
 }
