@@ -1,0 +1,18 @@
+.page-tunner {
+  width: 80%;
+  border: 1px solid red;
+  bottom: 0;
+  right: 70px;
+  ul,
+  li {
+    list-style: none;
+  }
+  .page-indicator {
+    width: 20px;
+    height: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: var(--amber-color50);
+    border-radius: 5px;
+  }
+}

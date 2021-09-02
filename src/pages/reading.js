@@ -1,8 +1,9 @@
 import React from "react";
 
-import Category from "../components/category/Category";
 import Layout from "../components/layout/Layout";
+import Category from "../components/category/Category";
 import PostList from "../components/post-list/PostList";
+import PageTunner from "../components/post-list/page-tunner/PageTunner";
 
 const Reading = () => {
   const categorys = {
@@ -36,7 +37,10 @@ const Reading = () => {
   return (
     <Layout customClassName="reading">
       <Category categorys={categorys} />
-      <PostList readings={readings} />
+      <div className="post-part">
+        <PostList readings={readings} />
+        <PageTunner readings={readings} />
+      </div>
     </Layout>
   );
 };

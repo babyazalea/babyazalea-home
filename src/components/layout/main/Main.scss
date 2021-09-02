@@ -20,5 +20,10 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: 1.5fr 4fr;
-  justify-items: center;
+  .post-part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
