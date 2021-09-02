@@ -5,6 +5,15 @@ import Layout from "../components/layout/Layout";
 import PostList from "../components/post-list/PostList";
 
 const Reading = () => {
+  const categorys = {
+    name: "모든 글",
+    subCategorys: [
+      { name: "프로그래밍" },
+      { name: "생각들" },
+      { name: "옛날들" },
+    ],
+  };
+
   const readings = [
     {
       title: "test1",
@@ -26,7 +35,7 @@ const Reading = () => {
 
   return (
     <Layout customClassName="reading">
-      <Category />
+      <Category categorys={categorys} />
       <PostList readings={readings} />
     </Layout>
   );
