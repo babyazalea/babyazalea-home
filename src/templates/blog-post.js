@@ -3,19 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
 
-const BlogPostTemplate = ({ data }) => {
-  const post = data.markdownRemark;
-
-  return (
-    <Layout>
-      <h1>{post.frontmatter.title}</h1>
-    </Layout>
-  );
-};
-
-export default BlogPostTemplate;
-
-export const pageQuery = graphql`
+export const query = graphql`
   query PostQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
@@ -23,8 +11,26 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        category
+      }
+      fields {
+        slug
       }
     }
   }
 `;
+
+const BlogPostTemplate = ({ data }) => {
+  const post = data.markdownRemark;
+  console.log(post);
+
+  return (
+    <Layout>
+      <h1>{post.frontmatter.title}</h1>
+      <span>{post.frontmatter.date}</span>
+      <div>{post.html}</div>
+    </Layout>
+  );
+};
+
+export default BlogPostTemplate;

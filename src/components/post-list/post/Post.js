@@ -9,7 +9,7 @@ const Post = (props) => {
       <Card customClassName="post-card">
         <h2 className="post-title">{props.reading.title}</h2>
         <span className="post-written-at">
-          {props.reading.writtenAt.toISOString().slice(0, 10)}
+          {props.reading.date.slice(0, 10)}
         </span>
       </Card>
     </div>

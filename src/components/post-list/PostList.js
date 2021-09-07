@@ -8,9 +8,9 @@ const PostList = (props) => {
   return (
     <div className="post-list">
       <ul>
-        {props.readings.map((reading, index) => (
-          <li key={index}>
-            <Post reading={reading} />
+        {props.readings.map((reading) => (
+          <li key={reading.id}>
+            <Post reading={reading.frontmatter} />
           </li>
         ))}
       </ul>
