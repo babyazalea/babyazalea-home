@@ -13,13 +13,19 @@
   }
   ul,
   li {
-    margin: 0;
     list-style: none;
   }
-  .reading-all {
+  .category-wrapper {
     padding: 0;
+    .reading-all {
+      display: inline-block;
+      margin-bottom: 2px;
+    }
   }
   .sub-category {
     margin-top: 10px;
+    ul {
+      padding-left: 20px;
+    }
   }
 }

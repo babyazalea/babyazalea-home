@@ -5,8 +5,8 @@ import "./Category.scss";
 const Category = (props) => {
   return (
     <div className="category">
-      <ul className="reading-all">
-        <span>
+      <ul className="category-wrapper">
+        <span className="reading-all">
           <i className="far fa-folder"></i>
           모든 글
         </span>
