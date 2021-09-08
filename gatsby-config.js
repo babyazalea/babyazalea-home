@@ -26,13 +26,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/content/portfolios`,
-        name: `portfolios`,
-      },
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [], // just in case those previously mentioned remark plugins sound cool :)
