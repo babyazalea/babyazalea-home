@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
@@ -14,6 +14,7 @@ export const query = graphql`
         frontmatter {
           title
           date
+          category
         }
       }
     }
@@ -21,25 +22,45 @@ export const query = graphql`
 `;
 
 const Reading = ({ data }) => {
-  console.log(data.allMarkdownRemark.nodes);
+  const allReadings = data.allMarkdownRemark.nodes;
 
-  const categorys = {
-    name: "모든 글",
-    subCategorys: [
-      { name: "프로그래밍" },
-      { name: "생각들" },
-      { name: "옛날들" },
-    ],
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [showingReadings, setShowingReadings] = useState(allReadings);
+
+  useEffect(() => {
+    setShowingReadings(() =>
+      selectedCategory !== null
+        ? allReadings.filter(
+            (readings) => readings.frontmatter.category === selectedCategory
+          )
+        : allReadings
+    );
+  }, [selectedCategory, allReadings]);
+
+  const subCategorys = [
+    { name: "프로그래밍" },
+    { name: "생각들" },
+    { name: "옛날들" },
+  ];
+
+  const categoryHandler = (categoryName) => {
+    setSelectedCategory(categoryName);
   };
 
-  const readings = data.allMarkdownRemark.nodes;
+  const categoryInitializer = () => {
+    setSelectedCategory(null);
+  };
 
   return (
     <Layout customClassName="reading">
-      <Category categorys={categorys} />
+      <Category
+        subCategorys={subCategorys}
+        categoryHandler={categoryHandler}
+        categoryInitializer={categoryInitializer}
+      />
       <div className="post-part">
-        <PostList readings={readings} />
-        <PageTunner readings={readings} />
+        <PostList readings={showingReadings} />
+        <PageTunner readings={showingReadings} />
       </div>
     </Layout>
   );

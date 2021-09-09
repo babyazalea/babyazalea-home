@@ -6,17 +6,20 @@ const Category = (props) => {
   return (
     <div className="category">
       <ul className="category-wrapper">
-        <span className="reading-all">
+        <button
+          className="reading-all"
+          onClick={() => props.categoryInitializer()}
+        >
           <i className="far fa-folder"></i>
           모든 글
-        </span>
-        {props.categorys.subCategorys.map((category, index) => {
+        </button>
+        {props.subCategorys.map((category, index) => {
           return (
             <li key={index} className="sub-category">
-              <ul>
+              <button onClick={() => props.categoryHandler(category.name)}>
                 <i className="far fa-folder"></i>
                 {category.name}
-              </ul>
+              </button>
             </li>
           );
         })}

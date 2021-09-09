@@ -15,6 +15,11 @@
   li {
     list-style: none;
   }
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
   .category-wrapper {
     padding: 0;
     .reading-all {
@@ -24,7 +29,8 @@
   }
   .sub-category {
     margin-top: 10px;
-    ul {
+    button {
+      display: inline-block;
       padding-left: 20px;
     }
   }
