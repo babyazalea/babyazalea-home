@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { portfoliosData } from "../content/portfolios/portfolios-data";
 
 import Sorting from "../components/sorting/Sorting";
@@ -16,6 +16,27 @@ const Portfolios = () => {
   const [portfolios, setPortfolios] = useState(portfoliosData);
   const [skills, setSkills] = useState(removeDuplicateSkills);
   const [sortingSkills, setSortingSkills] = useState([]);
+
+  useEffect(() => {
+    setPortfolios((prevPortfolios) => {
+      if (sortingSkills.length > 0) {
+        let sortedPortfolios = [];
+        for (const sortingSkill of sortingSkills) {
+          const filteredPortfolios = portfolios.filter(
+            (portfolio) =>
+              portfolio.skills.findIndex((skill) => skill === sortingSkill) !==
+              -1
+          );
+          filteredPortfolios.map((portfolio) =>
+            sortedPortfolios.push(portfolio)
+          );
+        }
+        console.log(sortedPortfolios);
+        return [...new Set(sortedPortfolios.flat())];
+      }
+      return [...prevPortfolios];
+    });
+  }, [sortingSkills]);
 
   const skillSelectedHandler = (skillName) => {
     setSortingSkills((prevSortingSkills) => {
