@@ -16,7 +16,13 @@ const Skill = (props) => {
     }
   };
 
-  return <div className="skill">{skillNameConverter(props.skill)}</div>;
+  return (
+    <div className={props.isSelected ? "skill selected-skill" : "skill"}>
+      <button onClick={() => props.skillSelectedHandler(props.skill)}>
+        {skillNameConverter(props.skill)}
+      </button>
+    </div>
+  );
 };
 
 export default Skill;

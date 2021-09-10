@@ -17,7 +17,17 @@
   .none-selected {
     width: 100%;
   }
+  .selected {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .fully-selected {
+    padding-top: 0;
+    border: none;
+  }
   .sorting-message {
-    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
   }
 }
