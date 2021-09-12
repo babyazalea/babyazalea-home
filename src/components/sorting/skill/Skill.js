@@ -18,7 +18,13 @@ const Skill = (props) => {
 
   return (
     <div className={props.isSelected ? "skill selected-skill" : "skill"}>
-      <button onClick={() => props.skillSelectedHandler(props.skill)}>
+      <button
+        onClick={() =>
+          props.isSelected
+            ? props.skillUnselectedHandler(props.skill)
+            : props.skillSelectedHandler(props.skill)
+        }
+      >
         {skillNameConverter(props.skill)}
       </button>
     </div>

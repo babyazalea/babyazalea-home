@@ -12,7 +12,12 @@ const Sorting = (props) => {
       >
         <span className="sorting-message">다음 스킬에 따라 분류합니다:</span>
         {props.sortingSkills.map((skill, index) => (
-          <Skill key={index} isSelected={true} skill={skill} />
+          <Skill
+            key={index}
+            isSelected={true}
+            skill={skill}
+            skillUnselectedHandler={props.skillUnselectedHandler}
+          />
         ))}
       </div>
     );
