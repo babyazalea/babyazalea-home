@@ -5,12 +5,23 @@
   li {
     list-style: none;
   }
+  ul {
+    display: flex;
+    gap: 10px;
+  }
   .page-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 100%;
-    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: var(--amber-color50);
     border-radius: 5px;
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
   }
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
+import { blogCategorys } from "../content/blog/blog-categorys";
 
 import Layout from "../components/layout/Layout";
 import Category from "../components/category/Category";
@@ -23,25 +24,35 @@ export const query = graphql`
 
 const Reading = ({ data }) => {
   const allReadings = data.allMarkdownRemark.nodes;
+  const maximumPostsNumber = 4;
 
+  const [selectedPageNum, setSelectedPageNum] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [showingReadings, setShowingReadings] = useState(allReadings);
+  const [showingReadings, setShowingReadings] = useState([]);
 
   useEffect(() => {
     setShowingReadings(() =>
       selectedCategory !== null
-        ? allReadings.filter(
-            (readings) => readings.frontmatter.category === selectedCategory
+        ? allReadings
+            .filter(
+              (readings) => readings.frontmatter.category === selectedCategory
+            )
+            .slice(
+              selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
+              selectedPageNum > 1
+                ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
+                : maximumPostsNumber
+            )
+        : allReadings.slice(
+            selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
+            selectedPageNum > 1
+              ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
+              : maximumPostsNumber
           )
-        : allReadings
     );
-  }, [selectedCategory, allReadings]);
+  }, [selectedCategory, allReadings, selectedPageNum]);
 
-  const subCategorys = [
-    { name: "프로그래밍" },
-    { name: "생각들" },
-    { name: "옛날들" },
-  ];
+  const subCategorys = blogCategorys;
 
   const categoryHandler = (categoryName) => {
     setSelectedCategory(categoryName);
@@ -50,6 +61,19 @@ const Reading = ({ data }) => {
   const categoryInitializer = () => {
     setSelectedCategory(null);
   };
+
+  const selectPageNumHandler = (num) => {
+    setSelectedPageNum((prevNum) => prevNum !== num && num);
+  };
+
+  let readingsNumber;
+  if (selectedCategory !== null) {
+    readingsNumber = allReadings.filter(
+      (readings) => readings.frontmatter.category === selectedCategory
+    ).length;
+  } else {
+    readingsNumber = allReadings.length;
+  }
 
   return (
     <Layout customClassName="reading">
@@ -60,7 +84,10 @@ const Reading = ({ data }) => {
       />
       <div className="post-part">
         <PostList readings={showingReadings} />
-        <PageTunner readings={showingReadings} />
+        <PageTunner
+          readingsNumber={readingsNumber}
+          selectPageNumHandler={selectPageNumHandler}
+        />
       </div>
     </Layout>
   );

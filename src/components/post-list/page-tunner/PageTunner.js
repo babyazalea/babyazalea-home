@@ -4,10 +4,10 @@ import "./PageTunner.scss";
 
 const PageTunner = (props) => {
   const pageIndicators = ["1"];
-  if (props.readings.length >= 5) {
-    const pagesNumber = props.readings.length / 4 + 1;
-    for (let i = 0; i < pagesNumber + 1; i++) {
-      pageIndicators.push(i);
+  if (props.readingsNumber >= 5) {
+    const pagesNumber = Math.floor(props.readingsNumber / 4) + 1;
+    for (let i = 2; i < pagesNumber + 1; i++) {
+      pageIndicators.push(`${i}`);
     }
   }
 
@@ -16,7 +16,13 @@ const PageTunner = (props) => {
       <ul>
         {pageIndicators.map((pageIndicator, index) => (
           <li className="page-indicator" key={index}>
-            <span>{pageIndicator}</span>
+            <button
+              onClick={() =>
+                props.selectPageNumHandler(parseInt(pageIndicator))
+              }
+            >
+              <span>{pageIndicator}</span>
+            </button>
           </li>
         ))}
       </ul>
