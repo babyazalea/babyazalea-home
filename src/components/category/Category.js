@@ -16,9 +16,9 @@ const Category = (props) => {
         {props.subCategorys.map((category, index) => {
           return (
             <li key={index} className="sub-category">
-              <button onClick={() => props.categoryHandler(category.name)}>
+              <button onClick={() => props.categoryHandler(category)}>
                 <i className="far fa-folder"></i>
-                {category.name}
+                {category}
               </button>
             </li>
           );

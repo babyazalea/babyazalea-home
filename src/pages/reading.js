@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
-import { blogCategorys } from "../content/blog/blog-categorys";
 
 import Layout from "../components/layout/Layout";
 import Category from "../components/category/Category";
@@ -25,6 +24,11 @@ export const query = graphql`
 const Reading = ({ data }) => {
   const allReadings = data.allMarkdownRemark.nodes;
   const maximumPostsNumber = 4;
+  const categorys = [
+    ...new Set(
+      allReadings.map((reading) => reading.frontmatter.category).flat()
+    ),
+  ];
 
   const [selectedPageNum, setSelectedPageNum] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -52,8 +56,6 @@ const Reading = ({ data }) => {
     );
   }, [selectedCategory, allReadings, selectedPageNum]);
 
-  const subCategorys = blogCategorys;
-
   const categoryHandler = (categoryName) => {
     setSelectedCategory(categoryName);
   };
@@ -78,7 +80,7 @@ const Reading = ({ data }) => {
   return (
     <Layout customClassName="reading">
       <Category
-        subCategorys={subCategorys}
+        subCategorys={categorys}
         categoryHandler={categoryHandler}
         categoryInitializer={categoryInitializer}
       />
