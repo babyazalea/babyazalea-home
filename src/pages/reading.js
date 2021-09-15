@@ -24,36 +24,41 @@ export const query = graphql`
 const Reading = ({ data }) => {
   const allReadings = data.allMarkdownRemark.nodes;
   const maximumPostsNumber = 4;
-  const categorys = [
-    ...new Set(
-      allReadings.map((reading) => reading.frontmatter.category).flat()
-    ),
-  ];
+  const categorys =
+    allReadings !== null
+      ? [
+          ...new Set(
+            allReadings.map((reading) => reading.frontmatter.category).flat()
+          ),
+        ]
+      : [];
 
   const [selectedPageNum, setSelectedPageNum] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [showingReadings, setShowingReadings] = useState([]);
 
   useEffect(() => {
-    setShowingReadings(() =>
-      selectedCategory !== null
-        ? allReadings
-            .filter(
-              (readings) => readings.frontmatter.category === selectedCategory
-            )
-            .slice(
+    if (allReadings !== null) {
+      setShowingReadings(() =>
+        selectedCategory !== null
+          ? allReadings
+              .filter(
+                (readings) => readings.frontmatter.category === selectedCategory
+              )
+              .slice(
+                selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
+                selectedPageNum > 1
+                  ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
+                  : maximumPostsNumber
+              )
+          : allReadings.slice(
               selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
               selectedPageNum > 1
                 ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
                 : maximumPostsNumber
             )
-        : allReadings.slice(
-            selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
-            selectedPageNum > 1
-              ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
-              : maximumPostsNumber
-          )
-    );
+      );
+    }
   }, [selectedCategory, allReadings, selectedPageNum]);
 
   const categoryHandler = (categoryName) => {
