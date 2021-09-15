@@ -5,68 +5,46 @@ import firebaseLogo from "../../../images/logos/firebase.svg";
 import "./Portfolio.scss";
 
 const Portfolio = (props) => {
-  let insideBg;
-  let titleAndDescBg;
-  if (
-    props.portfolio["theme-color"] &&
-    props.portfolio["theme-color"].includes("color")
-  ) {
-    const colorNumber = props.portfolio["theme-color"]
-      .split("color")[1]
-      .split(")")[0];
-    const colorNameTemplate = props.portfolio["theme-color"].replace(
-      colorNumber,
-      "-number"
-    );
+  let insideBg = {};
+  let titleAndDescBg = {};
 
-    let lightColorNumber = 100;
+  if (props.portfolio["color-theme"]) {
+    const portfolioTheme = props.portfolio["color-theme"];
 
-    if (colorNumber > 400) {
-      lightColorNumber = 200;
-    }
-
-    insideBg = {
-      backgroundColor: colorNameTemplate.replace(
-        "-number",
-        lightColorNumber / 2
-      ),
-    };
-
-    titleAndDescBg = {
-      backgroundColor: colorNameTemplate.replace("-number", lightColorNumber),
-    };
+    insideBg = portfolioTheme["inside-card"].emojiBg;
+    titleAndDescBg = portfolioTheme["inside-card"].textBg;
   }
 
   return (
     <div className="portfolio">
       <Card
         customClassName="portfolio-card"
-        bgColor={props.portfolio["theme-color"]}
+        bgStyle={props.portfolio["color-theme"].card}
       >
         <div className="portfolio-inside" style={insideBg}>
           <div className="portfolio-title" style={titleAndDescBg}>
             <span>{props.portfolio.title}</span>
-          </div>
-          <div className="show-me-what-you-got" style={titleAndDescBg}>
-            {props.portfolio.skills.map((skill, index) => {
-              if (skill === "firebase") {
+            <div className="show-me-what-you-got">
+              {props.portfolio.skills.map((skill, index) => {
+                if (skill === "firebase") {
+                  return (
+                    <div className="skill-icon" key={index}>
+                      <img
+                        src={firebaseLogo}
+                        alt="firebase logo"
+                        className="firebase-logo"
+                        key={index}
+                      />
+                    </div>
+                  );
+                }
                 return (
                   <div className="skill-icon" key={index}>
-                    <img
-                      src={firebaseLogo}
-                      alt="firebase logo"
-                      className="firebase-logo"
-                      key={index}
-                    />
+                    <i className={`fab fa-${skill}`}></i>
                   </div>
                 );
-              }
-              return (
-                <div className="skill-icon" key={index}>
-                  <i className={`fab fa-${skill}`}></i>
-                </div>
-              );
-            })}
+              })}
+            </div>
           </div>
           <div className="emoji">{props.portfolio.emoji}</div>
           <div className="portfolio-description" style={titleAndDescBg}>

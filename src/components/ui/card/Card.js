@@ -8,13 +8,13 @@ const Card = (props) => {
     cardClassName = `card ${props.customClassName}`;
   }
 
-  let bgColor;
-  if (props.bgColor) {
-    bgColor = props.bgColor;
+  let bgStyle = {};
+  if (props.bgStyle) {
+    bgStyle = props.bgStyle;
   }
 
   return (
-    <div className={cardClassName} style={{ backgroundColor: bgColor }}>
+    <div className={cardClassName} style={bgStyle}>
       {props.children}
     </div>
   );

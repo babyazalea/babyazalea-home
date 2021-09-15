@@ -3,21 +3,48 @@ export const portfoliosData = [
     title: "test1",
     description: "test1 desc",
     skills: ["react", "firebase", "angular"],
-    "theme-color": "var(--amber-color800)",
+    "color-theme": {
+      card: {
+        backgroundColor: "#FBAB7E",
+        backgroundImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
+      "inside-card": {
+        textBg: { backgroundColor: "var(--amber-color100)" },
+        emojiBg: { backgroundColor: "var(--white-color)" },
+      },
+    },
     emoji: "🍔",
   },
   {
     title: "test2",
     description: "test2 desc",
     skills: ["react", "firebase"],
-    "theme-color": "var(--cyan-color800)",
+    "color-theme": {
+      card: {
+        backgroundColor: "#FBAB7E",
+        backgroundImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
+      "inside-card": {
+        textBg: { backgroundColor: "var(--amber-color100)" },
+        emojiBg: { backgroundColor: "var(--white-color)" },
+      },
+    },
     emoji: "🍔",
   },
   {
     title: "test3",
     description: "test3 desc",
     skills: ["react", "angular"],
-    "theme-color": "var(--grey-color800)",
+    "color-theme": {
+      card: {
+        backgroundColor: "#FBAB7E",
+        backgroundImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
+      "inside-card": {
+        textBg: { backgroundColor: "var(--amber-color100)" },
+        emojiBg: { backgroundColor: "var(--white-color)" },
+      },
+    },
     emoji: "🍔",
   },
 ];
