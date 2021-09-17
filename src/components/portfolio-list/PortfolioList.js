@@ -7,9 +7,13 @@ import "./PortfolioList.scss";
 const PortfolioList = (props) => {
   return (
     <div className="portfolios-wrapper">
-      {props.portfolios.map((portfolio, index) => (
-        <Portfolio portfolio={portfolio} key={index} />
-      ))}
+      <ul>
+        {props.portfolios.map((portfolio, index) => (
+          <li key={index}>
+            <Portfolio portfolio={portfolio} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
