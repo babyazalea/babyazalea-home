@@ -1,10 +1,11 @@
 import * as React from "react";
-import Home from "../components/home/Home";
+
 import Layout from "../components/layout/Layout";
+import Home from "../components/home/Home";
 
 const IndexPage = () => {
   return (
-    <Layout customClassName={"home"}>
+    <Layout customClassName="top">
       <Home />
     </Layout>
   );

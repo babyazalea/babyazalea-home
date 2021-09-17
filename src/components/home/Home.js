@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./Home.scss";
 import Introduction from "./introduction/Introduction";
+import "./Home.scss";
 // import Prologue from "./prologue/Prologue";
 
 const Home = () => {
