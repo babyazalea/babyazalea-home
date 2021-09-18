@@ -43,27 +43,6 @@
           padding-right: 10px;
           height: 100%;
           gap: 5px;
-          .skill-icon {
-            width: 27px;
-            height: 27px;
-            border-radius: 50%;
-            background-color: var(--white-color);
-          }
-        }
-        i {
-          font-size: 1.3rem;
-        }
-        i.fa-react {
-          font-weight: bold;
-          color: #61dafb;
-        }
-
-        i.fa-angular {
-          color: #e52938;
-        }
-
-        .firebase-logo {
-          width: 0.95rem;
         }
       }
       .emoji {

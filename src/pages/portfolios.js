@@ -1,16 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { portfoliosData } from "../content/portfolios/portfolios-data";
+import {
+  portfoliosData,
+  hadSkills,
+} from "../content/portfolios/portfolios-data";
 
 import Sorting from "../components/sorting/Sorting";
 import Layout from "../components/layout/Layout";
 import PortfolioList from "../components/portfolio-list/PortfolioList";
-
-const skillCollection = [];
-for (let i = 0; i < portfoliosData.length; i++) {
-  skillCollection.push(portfoliosData[i].skills);
-}
-
-const removeDuplicateSkills = [...new Set(skillCollection.flat())];
 
 const comparingSkills = (portfolioSkills, selectedSkills) => {
   let score = 0;
@@ -24,7 +20,7 @@ const comparingSkills = (portfolioSkills, selectedSkills) => {
 };
 
 const Portfolios = () => {
-  const skills = useMemo(() => removeDuplicateSkills, []);
+  const skills = useMemo(() => hadSkills(), []);
 
   const [portfolios, setPortfolios] = useState(portfoliosData);
   const [allSkills, setAllSkills] = useState(skills);

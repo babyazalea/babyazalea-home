@@ -1,7 +1,7 @@
 import React from "react";
 
 import Card from "../../ui/card/Card";
-import firebaseLogo from "../../../images/logos/firebase.svg";
+import SkillIcons from "../../ui/skill-icon/SkillIcons";
 import "./Portfolio.scss";
 
 const Portfolio = (props) => {
@@ -25,25 +25,7 @@ const Portfolio = (props) => {
           <div className="portfolio-title" style={titleAndDescBg}>
             <span>{props.portfolio.title}</span>
             <div className="show-me-what-you-got">
-              {props.portfolio.skills.map((skill, index) => {
-                if (skill === "firebase") {
-                  return (
-                    <div className="skill-icon" key={index}>
-                      <img
-                        src={firebaseLogo}
-                        alt="firebase logo"
-                        className="firebase-logo"
-                        key={index}
-                      />
-                    </div>
-                  );
-                }
-                return (
-                  <div className="skill-icon" key={index}>
-                    <i className={`fab fa-${skill}`}></i>
-                  </div>
-                );
-              })}
+              <SkillIcons skills={props.portfolio.skills} />
             </div>
           </div>
           <div className="emoji">{props.portfolio.emoji}</div>

@@ -48,3 +48,14 @@ export const portfoliosData = [
     emoji: "🍔",
   },
 ];
+
+export const hadSkills = () => {
+  const skillCollection = [];
+  for (let i = 0; i < portfoliosData.length; i++) {
+    skillCollection.push(portfoliosData[i].skills);
+  }
+
+  const removeDuplicateSkills = [...new Set(skillCollection.flat())];
+
+  return removeDuplicateSkills;
+};
