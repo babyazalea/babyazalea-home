@@ -2,8 +2,6 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 10px;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -13,17 +11,117 @@
     "one one one one three three three"
     "four four five five five six six"
     "four four five five five six six"
-    "seven seven five five five six six"
-    "eight eight eight eight eight six six";
-  gap: 20px;
+    "seven eight five five five six six"
+    ". . . . . six six";
+  gap: 4%;
   .one {
     grid-area: one;
+    transition: all 0.5s ease;
+    .intro-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        span {
+          display: inline-block;
+          font-family: "Paytone One", sans-serif;
+          font-size: 2rem;
+          font-style: italic;
+          color: var(--grey-color400);
+          background: linear-gradient(
+            to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1)
+          );
+          background-size: 0 0.1em;
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          transition: all 0.5s ease;
+        }
+        span:first-child {
+          margin-bottom: 15%;
+        }
+      }
+    }
+  }
+  .one:hover {
+    .intro-card {
+      div {
+        span {
+          background-size: 100% 0.1em;
+          color: var(--grey-color900);
+        }
+      }
+    }
   }
   .two {
     grid-area: two;
+    .intro-card {
+      div {
+        display: grid;
+        span {
+          color: var(--grey-color400);
+          font-family: "Hahmlet", serif;
+          transition: all 0.5s ease;
+        }
+        span:first-child {
+          font-size: 1.5rem;
+          justify-self: center;
+          align-self: flex-end;
+          font-weight: bold;
+        }
+        span:last-child {
+          font-size: 0.7rem;
+          align-self: flex-start;
+          justify-self: center;
+        }
+      }
+    }
+  }
+  .two:hover {
+    .intro-card {
+      div {
+        span {
+          color: var(--grey-color900);
+        }
+        span:first-child {
+          font-size: 0.7rem;
+          align-self: flex-end;
+          justify-self: center;
+        }
+        span:last-child {
+          font-size: 1.5rem;
+          justify-self: center;
+          align-self: flex-start;
+          font-weight: bold;
+        }
+      }
+    }
   }
   .three {
     grid-area: three;
+    .intro-card {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .portfolio-nav-text-part {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        span {
+          color: var(--grey-color400);
+          font-family: "Hahmlet", serif;
+        }
+        span:first-child {
+        }
+      }
+      .portfolio-nav-logo-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
   .four {
     grid-area: four;
@@ -40,14 +138,21 @@
   .eight {
     grid-area: eight;
   }
-  div {
+  .intro-box {
     justify-self: center;
     align-self: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
     .intro-card {
       width: 100%;
       height: 100%;
+      transition: all 0.5s ease;
+    }
+  }
+  .intro-box:hover {
+    .intro-card {
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 10px;
     }
   }
 }
