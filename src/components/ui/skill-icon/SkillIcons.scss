@@ -1,8 +1,8 @@
 .skill-icon {
-  width: 27px;
-  height: 27px;
+  width: 1.7rem;
+  height: 1.7rem;
   border-radius: 50%;
-  background-color: var(--white-color);
+  background-color: rgb(251, 248, 240);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,5 +20,16 @@
 
   .firebase-logo {
     width: 0.95rem;
+  }
+}
+
+.portfolios-nav-skills {
+  width: 2.5rem;
+  height: 2.5rem;
+  i {
+    font-size: 1.5rem;
+  }
+  .firebase-logo {
+    width: 1.1rem;
   }
 }

@@ -5,11 +5,17 @@ import "./SkillIcons.scss";
 
 const SkillIcons = (props) => {
   let skillIcons = null;
+  let className = "skill-icon";
+
+  if (props.customClassName) {
+    className = `skill-icon ${props.customClassName}`;
+  }
+
   if (props.skills) {
     skillIcons = props.skills.map((skill, index) => {
       if (skill === "firebase") {
         return (
-          <div className="skill-icon" key={index}>
+          <div className={className} key={index}>
             <img
               src={firebaseLogo}
               alt="firebase logo"
@@ -20,7 +26,7 @@ const SkillIcons = (props) => {
         );
       }
       return (
-        <div className="skill-icon" key={index}>
+        <div className={className} key={index}>
           <i className={`fab fa-${skill}`}></i>
         </div>
       );

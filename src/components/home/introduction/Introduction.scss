@@ -58,6 +58,8 @@
   .two {
     grid-area: two;
     .intro-card {
+      display: flex;
+      justify-content: center;
       div {
         display: grid;
         span {
@@ -103,24 +105,55 @@
     grid-area: three;
     .intro-card {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       .portfolio-nav-text-part {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        position: relative;
+        text-align: center;
         span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
           color: var(--grey-color400);
           font-family: "Hahmlet", serif;
+          transition: all 0.4s ease-in-out;
         }
         span:first-child {
+          opacity: 1;
+        }
+        span:last-child {
+          opacity: 0;
         }
       }
-      .portfolio-nav-logo-part {
+      .portfolio-nav-skills-part {
+        justify-self: center;
+        align-self: flex-end;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        gap: 10px;
       }
+    }
+  }
+  .three:hover {
+    .intro-card {
+      .portfolio-nav-text-part {
+        span:first-child {
+          opacity: 0;
+        }
+        span:last-child {
+          color: var(--grey-color900);
+          font-weight: bold;
+          opacity: 1;
+        }
+      }
+      // .portfolio-nav-skills-part {
+      //   .portfolios-nav-skills {
+      //     background-color: var(--beige-color200);
+      //   }
+      // }
     }
   }
   .four {

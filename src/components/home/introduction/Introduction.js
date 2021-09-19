@@ -29,11 +29,15 @@ const Introduction = () => {
       </div>
       <div className="intro-box three">
         <Card customClassName="intro-card">
-          <div className="portfolio-nav-logo-part">
-            <SkillIcons skills={skills} />
+          <div className="portfolio-nav-skills-part">
+            <SkillIcons
+              skills={skills}
+              customClassName="portfolios-nav-skills"
+            />
           </div>
           <div className="portfolio-nav-text-part">
             <span>포트폴리오</span>
+            <span>SIDE PROJECT</span>
           </div>
         </Card>
       </div>
