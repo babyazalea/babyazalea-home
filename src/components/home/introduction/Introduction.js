@@ -42,7 +42,9 @@ const Introduction = () => {
         </Card>
       </div>
       <div className="intro-box four">
-        <Card customClassName="intro-card"></Card>
+        <Card customClassName="intro-card">
+          <span className="not-yet">준비 중입니다.</span>
+        </Card>
       </div>
       <div className="intro-box five">
         <Card customClassName="intro-card">
@@ -103,14 +105,22 @@ const Introduction = () => {
         </Card>
       </div>
       <div className="intro-box six">
-        <Card customClassName="intro-card"></Card>
+        <Card customClassName="intro-card">
+          <div className="blog-nav">
+            <span>BLOG</span>
+          </div>
+        </Card>
       </div>
       <div className="intro-box seven">
-        <Card customClassName="intro-card"></Card>
+        <Card customClassName="intro-card">
+          <a href="https://github.com/babyazalea">
+            <i className="fab fa-github"></i>
+          </a>
+        </Card>
       </div>
-      <div className="intro-box eight">
+      {/* <div className="intro-box eight">
         <Card customClassName="intro-card"></Card>
-      </div>
+      </div> */}
     </div>
   );
 };
