@@ -48,6 +48,7 @@ const Introduction = () => {
         <Card customClassName="intro-card">
           <div className="resume-wrapper">
             <div className="resume-title">
+              <span>이력서 / 자기소개서</span>
               <span>RESUME</span>
             </div>
             <div className="resume-visual">

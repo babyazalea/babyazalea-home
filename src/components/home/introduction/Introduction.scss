@@ -184,26 +184,27 @@
         .resume-title {
           width: 100%;
           height: 20%;
-          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           margin: 10px 0 0 0;
           padding: 10px;
           box-sizing: border-box;
           span {
-            width: 100%;
             font-weight: bold;
             font-style: italic;
-            left: 0;
             transition: all 0.4s ease;
             font-family: "Hahmlet", serif;
             color: var(--grey-color400);
           }
-          span:first-child {
-            left: 100%;
+          span:last-child {
+            font-size: 0.8rem;
           }
         }
         .resume-visual {
           width: 100%;
-          height: 85%;
+          height: 70%;
           overflow: hidden;
           padding: 15px;
           box-sizing: border-box;
@@ -212,14 +213,16 @@
               transition: all 0.4s ease;
               float: left;
               display: block;
-              width: 30%;
-              height: 4rem;
+              min-width: 3.3rem;
+              min-height: 3.3rem;
+              border-radius: 50%;
               margin-right: 10px;
-              background: center no-repeat url("../../../images/pxArt(4).png");
-              background-size: contain;
-              box-shadow: inset 0 0 1.5px 1.5px #fff;
+              background: no-repeat url("../../../images/pxArt(4).png");
+              background-size: cover;
+              background-position: top 80%;
+              // box-shadow: inset 0 0 1.5px 1.5px #fff;
               opacity: 0.3;
-              transition: all 0.5s ease;
+              transition: all 1s ease;
             }
             span {
               transition: all 0.4s ease;
@@ -243,7 +246,7 @@
                   rgba(0, 100, 200, 1)
                 );
               background-size: 100% 0.1em, 0 0.1em;
-              background-position: 100% 0%, 0 0%;
+              background-position: 100% 0%, 50% 50%;
               background-repeat: no-repeat;
               transition: all 0.5s ease;
             }
@@ -264,9 +267,9 @@
         .resume-visual {
           .blah-blah {
             .picture-frame {
-              background: center no-repeat
-                url("../../../images/pxArt_color.png");
-              background-size: contain;
+              background: no-repeat url("../../../images/pxArt_color.png");
+              background-size: cover;
+              background-position: top 80%;
               opacity: 1;
             }
             span {
