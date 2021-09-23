@@ -14,6 +14,8 @@
     "seven eight five five five six six"
     ". . . . . six six";
   gap: 4%;
+
+  // one
   .one {
     grid-area: one;
     transition: all 0.5s ease;
@@ -55,6 +57,8 @@
       }
     }
   }
+
+  // two
   .two {
     grid-area: two;
     .intro-card {
@@ -101,6 +105,8 @@
       }
     }
   }
+
+  // three
   .three {
     grid-area: three;
     .intro-card {
@@ -120,7 +126,7 @@
           width: 100%;
           color: var(--grey-color400);
           font-family: "Hahmlet", serif;
-          transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease;
         }
         span:first-child {
           opacity: 1;
@@ -134,6 +140,9 @@
         align-self: flex-end;
         display: flex;
         gap: 10px;
+        .portfolios-nav-skills {
+          transition: all 0.4s ease;
+        }
       }
     }
   }
@@ -149,25 +158,138 @@
           opacity: 1;
         }
       }
-      // .portfolio-nav-skills-part {
-      //   .portfolios-nav-skills {
-      //     background-color: var(--beige-color200);
-      //   }
-      // }
+      .portfolio-nav-skills-part {
+        .portfolios-nav-skills {
+          background-color: var(--beige-color200);
+        }
+      }
     }
   }
+  // four
   .four {
     grid-area: four;
   }
+
+  // five
   .five {
+    width: 100%;
+    height: 100%;
     grid-area: five;
+    .intro-card {
+      .resume-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        .resume-title {
+          width: 100%;
+          height: 20%;
+          text-align: center;
+          margin: 10px 0 0 0;
+          padding: 10px;
+          box-sizing: border-box;
+          span {
+            width: 100%;
+            font-weight: bold;
+            font-style: italic;
+            left: 0;
+            transition: all 0.4s ease;
+            font-family: "Hahmlet", serif;
+            color: var(--grey-color400);
+          }
+          span:first-child {
+            left: 100%;
+          }
+        }
+        .resume-visual {
+          width: 100%;
+          height: 85%;
+          overflow: hidden;
+          padding: 15px;
+          box-sizing: border-box;
+          .blah-blah {
+            .picture-frame {
+              transition: all 0.4s ease;
+              float: left;
+              display: block;
+              width: 30%;
+              height: 4rem;
+              margin-right: 15px;
+              background: center no-repeat url("../../../images/pxArt(4).png");
+              background-size: cover;
+              box-shadow: inset 0 0 1.5px 1.5px #fff;
+              opacity: 0.3;
+              transition: all 0.5s ease;
+            }
+            span {
+              transition: all 0.4s ease;
+              color: rgba(0, 0, 0, 0);
+              background: var(--grey-color200),
+                linear-gradient(
+                  to right,
+                  rgba(255, 0, 0, 1),
+                  rgba(255, 0, 180, 1),
+                  rgba(0, 100, 200, 1)
+                );
+              background: linear-gradient(
+                  to right,
+                  var(--grey-color100),
+                  var(--grey-color100)
+                ),
+                linear-gradient(
+                  to right,
+                  rgba(255, 0, 0, 1),
+                  rgba(255, 0, 180, 1),
+                  rgba(0, 100, 200, 1)
+                );
+              background-size: 100% 0.1em, 0 0.1em;
+              background-position: 100% 0%, 0 0%;
+              background-repeat: no-repeat;
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
   }
+  .five:hover {
+    .intro-card {
+      .resume-wrapper {
+        .resume-title {
+          span {
+            color: var(--grey-color900);
+            transition: all 0.4s ease;
+          }
+        }
+        .resume-visual {
+          .blah-blah {
+            .picture-frame {
+              background: center no-repeat
+                url("../../../images/pxArt_color.png");
+              background-size: cover;
+              opacity: 1;
+            }
+            span {
+              background-size: 0 0.1em, 100% 0.1em;
+              transition: all 0.4s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // six
   .six {
     grid-area: six;
   }
+
+  // seven
   .seven {
     grid-area: seven;
   }
+
+  // eight
   .eight {
     grid-area: eight;
   }
