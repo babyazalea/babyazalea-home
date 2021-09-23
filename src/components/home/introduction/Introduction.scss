@@ -214,9 +214,9 @@
               display: block;
               width: 30%;
               height: 4rem;
-              margin-right: 15px;
+              margin-right: 10px;
               background: center no-repeat url("../../../images/pxArt(4).png");
-              background-size: cover;
+              background-size: contain;
               box-shadow: inset 0 0 1.5px 1.5px #fff;
               opacity: 0.3;
               transition: all 0.5s ease;
@@ -266,7 +266,7 @@
             .picture-frame {
               background: center no-repeat
                 url("../../../images/pxArt_color.png");
-              background-size: cover;
+              background-size: contain;
               opacity: 1;
             }
             span {
