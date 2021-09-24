@@ -3,13 +3,13 @@ import { hadSkills } from "../../../content/portfolios/portfolios-data";
 
 import Card from "../../ui/card/Card";
 import SkillIcons from "../../ui/skill-icon/SkillIcons";
-import "./Introduction.scss";
+import "./HomeNavigation.scss";
 
-const Introduction = () => {
+const HomeNavigation = () => {
   const skills = hadSkills();
 
   return (
-    <div className="introduction">
+    <React.Fragment>
       <div className="intro-box one">
         <Card customClassName="intro-card">
           <div>
@@ -121,8 +121,8 @@ const Introduction = () => {
       {/* <div className="intro-box eight">
         <Card customClassName="intro-card"></Card>
       </div> */}
-    </div>
+    </React.Fragment>
   );
 };
 
-export default Introduction;
+export default HomeNavigation;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Introduction from "./introduction/Introduction";
+import HomeNavigation from "./home-navigation/HomeNavigation";
 import "./Home.scss";
 // import Prologue from "./prologue/Prologue";
 
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       {/* <Prologue /> */}
-      <Introduction />
+      <HomeNavigation />
     </div>
   );
 };

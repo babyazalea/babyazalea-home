@@ -1,4 +1,17 @@
 .home-wrapper {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "one one one one two two two"
+    "one one one one three three three"
+    "one one one one three three three"
+    "four four five five five six six"
+    "four four five five five six six"
+    "seven seven five five five six six"
+    ". . . . . six six";
+  gap: 4%;
 }
