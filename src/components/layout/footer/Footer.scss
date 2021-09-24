@@ -1,0 +1,27 @@
+footer {
+  width: 100%;
+  height: 100%;
+  grid-area: footer;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+  .copyright-text {
+    margin-right: 7px;
+    font-size: 0.8rem;
+    i {
+      margin-right: 5px;
+    }
+  }
+  .footer-gatsby-logo {
+    width: 1rem;
+    margin-right: 5px;
+  }
+  .footer-gc-logo {
+    width: 1.2rem;
+  }
+}
+
+footer:hover {
+  opacity: 1;
+}
