@@ -11,11 +11,16 @@ const PageTunner = (props) => {
     }
   }
 
+  const indicatorClasses = (indicatorNum) =>
+    indicatorNum === props.selectedPageNum
+      ? "page-indicator highlighted"
+      : "page-indicator";
+
   return (
     <div className="page-tunner">
       <ul>
         {pageIndicators.map((pageIndicator, index) => (
-          <li className="page-indicator" key={index}>
+          <li className={indicatorClasses(parseInt(pageIndicator))} key={index}>
             <button
               onClick={() =>
                 props.selectPageNumHandler(parseInt(pageIndicator))

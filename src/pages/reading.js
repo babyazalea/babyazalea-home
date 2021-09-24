@@ -96,6 +96,7 @@ const Reading = ({ data }) => {
         <PostList readings={showingReadings} />
         <PageTunner
           readingsNumber={readingsNumber}
+          selectedPageNum={selectedPageNum}
           selectPageNumHandler={selectPageNumHandler}
         />
       </div>

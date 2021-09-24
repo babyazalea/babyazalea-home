@@ -6,10 +6,6 @@ import Post from "./post/Post";
 import "./PostList.scss";
 
 const PostList = (props) => {
-  const readings = props.readings;
-
-  console.log(readings);
-
   return (
     <div className="post-list">
       <ul>
