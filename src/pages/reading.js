@@ -16,6 +16,9 @@ export const query = graphql`
           date
           category
         }
+        fields {
+          slug
+        }
       }
     }
   }
