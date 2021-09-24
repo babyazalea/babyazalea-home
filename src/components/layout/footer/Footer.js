@@ -12,12 +12,16 @@ const Footer = (props) => {
 
         <span>babyazalea, powered by</span>
       </span>
-      <img
-        className="footer-gatsby-logo"
-        src={gatsbyLogo}
-        alt="gatsbyJs logo"
-      />
-      <img className="footer-gc-logo" src={gcLogo} alt="gatsby cloud logo" />
+      <a href="https://www.gatsbyjs.com/">
+        <img
+          className="footer-gatsby-logo"
+          src={gatsbyLogo}
+          alt="gatsbyJs logo"
+        />
+      </a>
+      <a href="https://www.gatsbyjs.com/products/cloud/">
+        <img className="footer-gc-logo" src={gcLogo} alt="gatsby cloud logo" />
+      </a>
     </footer>
   );
 };

@@ -12,7 +12,7 @@
         font-family: "Paytone One", sans-serif;
         font-size: 2rem;
         font-style: italic;
-        color: var(--grey-color400);
+        color: var(--grey-color800);
         background: linear-gradient(
           to right,
           rgba(255, 0, 0, 1),
@@ -50,7 +50,7 @@
     div {
       display: grid;
       span {
-        color: var(--grey-color400);
+        color: var(--grey-color800);
         font-family: "Hahmlet", serif;
         transition: all 0.5s ease;
       }
@@ -107,7 +107,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        color: var(--grey-color400);
+        color: var(--grey-color800);
         font-family: "Hahmlet", serif;
         transition: all 0.4s ease;
       }
@@ -202,7 +202,7 @@
           font-style: italic;
           transition: all 0.4s ease;
           font-family: "Hahmlet", serif;
-          color: var(--grey-color400);
+          color: var(--grey-color800);
         }
         span:last-child {
           font-size: 0.8rem;
@@ -227,23 +227,16 @@
             background-size: cover;
             background-position: top 80%;
             // box-shadow: inset 0 0 1.5px 1.5px #fff;
-            opacity: 0.3;
+            opacity: 0.7;
             transition: all 1s ease;
           }
           span {
             transition: all 0.4s ease;
             color: rgba(0, 0, 0, 0);
-            background: var(--grey-color200),
-              linear-gradient(
-                to right,
-                rgba(255, 0, 0, 1),
-                rgba(255, 0, 180, 1),
-                rgba(0, 100, 200, 1)
-              );
             background: linear-gradient(
                 to right,
-                var(--grey-color100),
-                var(--grey-color100)
+                var(--grey-color200),
+                var(--grey-color200)
               ),
               linear-gradient(
                 to right,
@@ -252,7 +245,7 @@
                 rgba(0, 100, 200, 1)
               );
             background-size: 100% 0.1em, 0 0.1em;
-            background-position: 100% 0%, 50% 50%;
+            background-position: 100% 0%, 0% 0%;
             background-repeat: no-repeat;
             transition: all 0.5s ease;
           }
@@ -280,7 +273,6 @@
           }
           span {
             background-size: 0 0.1em, 100% 0.1em;
-            transition: all 0.4s ease;
           }
         }
       }
@@ -310,7 +302,7 @@
         font-weight: bold;
         font-size: 3rem;
         font-style: italic;
-        color: var(--grey-color400);
+        color: var(--grey-color700);
         transition: all 0.4s ease;
       }
     }
@@ -320,7 +312,7 @@
   .intro-card {
     .blog-nav {
       span {
-        color: var(--grey-color800);
+        color: var(--grey-color900);
       }
     }
   }
@@ -340,7 +332,7 @@
     a {
       margin-top: 8px;
       font-size: 2rem;
-      color: var(--grey-color400);
+      color: var(--grey-color700);
       transition: all 0.4s ease;
       z-index: 3;
     }
@@ -349,7 +341,7 @@
 .seven:hover {
   .intro-card {
     a {
-      color: var(--grey-color800);
+      color: var(--grey-color900);
     }
   }
 }
@@ -358,6 +350,8 @@
 .eight {
   grid-area: eight;
 }
+
+// entire box
 .intro-box {
   justify-self: center;
   align-self: center;

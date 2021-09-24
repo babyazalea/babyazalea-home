@@ -4,14 +4,20 @@ footer {
   grid-area: footer;
   display: flex;
   align-items: flex-end;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: opacity 0.2s linear;
+  cursor: default;
   .copyright-text {
     margin-right: 7px;
     font-size: 0.8rem;
     i {
       margin-right: 5px;
     }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .footer-gatsby-logo {
     width: 1rem;
