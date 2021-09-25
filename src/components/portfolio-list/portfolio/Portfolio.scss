@@ -67,7 +67,7 @@
         transform: translateX(-50%);
         bottom: 10px;
         display: flex;
-        div {
+        a {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -81,11 +81,11 @@
             color: var(--pure-white-color);
           }
         }
-        div:hover {
+        a:hover {
           opacity: 1;
           transform: scale(1.1);
         }
-        div:not(:last-child) {
+        a:not(:last-child) {
           margin-right: 10px;
         }
         .play-link {

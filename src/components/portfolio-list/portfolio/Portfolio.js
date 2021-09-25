@@ -33,12 +33,12 @@ const Portfolio = (props) => {
             <span>{props.portfolio.description}</span>
           </div>
           <div className="links">
-            <div className="play-link">
+            <a className="play-link" href={props.portfolio.playLink}>
               <i className="fas fa-play"></i>
-            </div>
-            <div className="github-link">
+            </a>
+            <a className="github-link" href={props.portfolio.githubLink}>
               <i className="fab fa-github"></i>
-            </div>
+            </a>
           </div>
         </div>
       </Card>
