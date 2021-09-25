@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import { hadSkills } from "../../../content/portfolios/portfolios-data";
 
@@ -29,16 +30,18 @@ const HomeNavigation = () => {
       </div>
       <div className="intro-box three">
         <Card customClassName="intro-card">
-          <div className="portfolio-nav-skills-part">
-            <SkillIcons
-              skills={skills}
-              customClassName="portfolios-nav-skills"
-            />
-          </div>
-          <div className="portfolio-nav-text-part">
-            <span>포트폴리오</span>
-            <span>SIDE PROJECT</span>
-          </div>
+          <Link to="/portfolios">
+            <div className="portfolio-nav-skills-part">
+              <SkillIcons
+                skills={skills}
+                customClassName="portfolios-nav-skills"
+              />
+            </div>
+            <div className="portfolio-nav-text-part">
+              <span>포트폴리오</span>
+              <span>SIDE PROJECT</span>
+            </div>
+          </Link>
         </Card>
       </div>
       <div className="intro-box four">
@@ -106,9 +109,9 @@ const HomeNavigation = () => {
       </div>
       <div className="intro-box six">
         <Card customClassName="intro-card">
-          <div className="blog-nav">
+          <Link className="blog-nav" to="/reading">
             <span>BLOG</span>
-          </div>
+          </Link>
         </Card>
       </div>
       <div className="intro-box seven">
@@ -118,9 +121,6 @@ const HomeNavigation = () => {
           </a>
         </Card>
       </div>
-      {/* <div className="intro-box eight">
-        <Card customClassName="intro-card"></Card>
-      </div> */}
     </React.Fragment>
   );
 };

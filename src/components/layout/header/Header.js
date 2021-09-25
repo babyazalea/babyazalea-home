@@ -8,17 +8,17 @@ const Header = () => {
   return (
     <header>
       <div>
-        <div>
+        {/* <div>
           <Link to="/portfolios">만든 것들</Link>
-        </div>
-        <div>
+        </div> */}
+        <div className="header-home-btn">
           <Link to="/">
             <img src={homeIcon} alt="home icon" />
           </Link>
         </div>
-        <div>
+        {/* <div>
           <Link to="/reading">읽을 거리</Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );

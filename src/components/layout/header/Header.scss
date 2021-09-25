@@ -15,27 +15,27 @@ header {
       }
     }
 
-    div:first-child,
-    div:last-child {
-      width: 130px;
-      height: 30px;
-      color: var(--grey-color500);
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    }
+    // div:first-child,
+    // div:last-child {
+    //   width: 130px;
+    //   height: 30px;
+    //   color: var(--grey-color500);
+    //   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    // }
 
-    div:first-child {
-      border-bottom-left-radius: 13px;
-      border-top-left-radius: 13px;
-      border-right: none;
-    }
+    // div:first-child {
+    //   border-bottom-left-radius: 13px;
+    //   border-top-left-radius: 13px;
+    //   border-right: none;
+    // }
 
-    div:last-child {
-      border-bottom-right-radius: 13px;
-      border-top-right-radius: 13px;
-      border-left: none;
-    }
+    // div:last-child {
+    //   border-bottom-right-radius: 13px;
+    //   border-top-right-radius: 13px;
+    //   border-left: none;
+    // }
 
-    div:nth-child(2) {
+    .header-home-btn {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
