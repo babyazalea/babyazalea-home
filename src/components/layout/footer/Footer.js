@@ -8,7 +8,7 @@ const Footer = (props) => {
   return (
     <footer>
       <span className="copyright-text">
-        <i class="far fa-copyright"></i>
+        <i className="far fa-copyright"></i>
 
         <span>babyazalea, powered by</span>
       </span>
