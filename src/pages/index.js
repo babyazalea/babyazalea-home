@@ -5,7 +5,7 @@ import Home from "../components/home/Home";
 
 const IndexPage = () => {
   return (
-    <Layout isHome={true} customClassName="top">
+    <Layout noExtension={true} customClassName="top">
       <Home />
     </Layout>
   );

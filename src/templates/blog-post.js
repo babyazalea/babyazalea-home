@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
+import "./blog-post.scss";
 
 export const query = graphql`
   query PostQuery($id: String!) {
@@ -10,7 +11,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         category
       }
       fields {
@@ -22,13 +23,19 @@ export const query = graphql`
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
-  console.log(post);
 
   return (
-    <Layout>
-      <h1>{post.frontmatter.title}</h1>
-      <span>{post.frontmatter.date}</span>
-      <div>{post.html}</div>
+    <Layout customClassName="post-template">
+      <div className="blog-post-caption">
+        <h1>{post.frontmatter.title}</h1>
+        <span>{post.frontmatter.date}</span>
+      </div>
+      <br />
+      <br />
+      <section
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        itemProp="articleBody"
+      />
     </Layout>
   );
 };

@@ -8,7 +8,10 @@ import "./Layout.scss";
 const Layout = (props) => {
   return (
     <div className="layout">
-      <Header isHome={props.isHome} customClassName={props.customClassName} />
+      <Header
+        noExtension={props.noExtension}
+        customClassName={props.customClassName}
+      />
       <Main customClassName={props.customClassName}>{props.children}</Main>
     </div>
   );
