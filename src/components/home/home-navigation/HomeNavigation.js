@@ -21,11 +21,12 @@ const HomeNavigation = () => {
         </Card>
       </div>
       <div className="intro-box two">
-        <Card customClassName="intro-card">
-          <div>
+        <Card customClassName="not-yet-card">
+          <span className="not-yet-text">준비 중입니다.</span>
+          {/* <div>
             <span>홈페이지 사용법</span>
             <span>README</span>
-          </div>
+          </div> */}
         </Card>
       </div>
       <div className="intro-box three">
@@ -45,13 +46,14 @@ const HomeNavigation = () => {
         </Card>
       </div>
       <div className="intro-box four">
-        <Card customClassName="intro-card">
-          <span className="not-yet">준비 중입니다.</span>
+        <Card customClassName="not-yet-card">
+          <span className="not-yet-text">준비 중입니다.</span>
         </Card>
       </div>
       <div className="intro-box five">
-        <Card customClassName="intro-card">
-          <div className="resume-wrapper">
+        <Card customClassName="not-yet-card">
+          <span className="not-yet-text">준비 중입니다.</span>
+          {/* <div className="resume-wrapper">
             <div className="resume-title">
               <span>이력서 / 자기소개서</span>
               <span>RESUME</span>
@@ -104,7 +106,7 @@ const HomeNavigation = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
         </Card>
       </div>
       <div className="intro-box six">

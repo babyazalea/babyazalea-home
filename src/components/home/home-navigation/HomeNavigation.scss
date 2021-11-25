@@ -1,3 +1,27 @@
+// not yet
+.not-yet-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  .not-yet-text {
+    font-family: "Hahmlet", serif;
+    color: var(--light-white-color);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+}
+.intro-box:hover {
+  .not-yet-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    .not-yet-text {
+      opacity: 1;
+    }
+  }
+}
+
 // one
 .one {
   grid-area: one;
@@ -161,27 +185,6 @@
   grid-area: four;
   width: 100%;
   height: 100%;
-  .intro-card {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .not-yet {
-      font-family: "Hahmlet", serif;
-      color: var(--light-white-color);
-      opacity: 0;
-      transition: all 0.4s ease;
-    }
-  }
-}
-.four:hover {
-  .intro-card {
-    background-color: rgba(0, 0, 0, 0.4);
-    .not-yet {
-      opacity: 1;
-    }
-  }
 }
 
 // five
