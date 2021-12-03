@@ -9683,7 +9683,7 @@
     "ansi-styles" "^4.0.0"
     "react-is" "^16.12.0"
 
-"prismjs@^1.15.0":
+"prismjs@^1.15.0", "prismjs@^1.25.0":
   "integrity" "sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg=="
   "resolved" "https://registry.npmjs.org/prismjs/-/prismjs-1.25.0.tgz"
   "version" "1.25.0"
