@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://babyazalea.gatsbyjs.io",
     title: "babyazaela's home",
   },
   plugins: [
@@ -40,9 +40,6 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              destinationDir: `path/to/dir`,
-            },
           },
         ],
       },
