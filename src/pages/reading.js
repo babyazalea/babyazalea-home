@@ -54,12 +54,23 @@ const Reading = ({ data }) => {
                   ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
                   : maximumPostsNumber
               )
-          : allReadings.slice(
-              selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
-              selectedPageNum > 1
-                ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
-                : maximumPostsNumber
-            )
+              .sort(function (a, b) {
+                return (
+                  new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+                );
+              })
+          : allReadings
+              .slice(
+                selectedPageNum > 1 ? (selectedPageNum - 1) * 3 + 1 : 0,
+                selectedPageNum > 1
+                  ? (selectedPageNum - 1) * 3 + maximumPostsNumber + 1
+                  : maximumPostsNumber
+              )
+              .sort(function (a, b) {
+                return (
+                  new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+                );
+              })
       );
     }
   }, [selectedCategory, allReadings, selectedPageNum]);
