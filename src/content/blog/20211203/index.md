@@ -2,7 +2,6 @@
 title: "angular-animation으로 간단한 애니메이션 구현하기"
 date: "2021-12-02T16:19:43.029Z"
 category: "나눠서 더하기"
-featuredImage: ../images/content/mongnokam-alert-bar.gif
 ---
 <br/>
 <br/>
@@ -99,3 +98,4 @@ Angular는 [공식 문서](https://angular.io/guide/animations)에서도 볼 수
 ```
 
 이제 완성이네요. 내려올 땐 부드럽게 내려오고 사라질 땐 확실히 사라집니다!
+<img src="./../../../images/alert_animation.gif" alt="Alert Bar Animation" style="margin-top: 3rem; width: 100%;" />
