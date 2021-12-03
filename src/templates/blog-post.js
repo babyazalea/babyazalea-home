@@ -32,10 +32,17 @@ const BlogPostTemplate = ({ data }) => {
       </div>
       <br />
       <br />
-      <section
-        dangerouslySetInnerHTML={{ __html: post.html }}
-        itemProp="articleBody"
-      />
+      <article
+        className="blog-post"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        <section
+          className="blog-post-section"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        />
+      </article>
     </Layout>
   );
 };
