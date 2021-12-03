@@ -62,7 +62,7 @@ Angular는 [공식 문서](https://angular.io/guide/animations)에서도 볼 수
     transition('* => *', [animate('0.2s')]) 
 ```
 
-이 라인은 결국 어떤 상태의 변화에 대하여 0.2초의 지연 효과(transition)를 부여하겠다는 의미입니다. 지연 시간을 파라미터로 받는 `animate` 함수가 이 효과를 발동시키지요. 중요한 건 이 `animate` 함수가 선언된 배열 바로 옆의 문자열, `'* => *'`  인데, 이 문자열은 '모든 상태 ⇒ 모든 상태'를 뜻합니다. 이를 통해 적어도  애니메이션 효과는 `'show ⇒ hide'` , `'hide ⇒ show'` , 두 가지 상태에 변화에 대해 0.2초의 지연 시간을 가질 것임을 추정할 수 있습니다.
+이 라인은 결국 어떤 상태의 변화에 대하여 0.2초의 지연 효과(transition)를 부여하겠다는 의미입니다. 지연 시간을 파라미터로 받는 `animate` 함수가 이 효과를 발동시키지요. 중요한 건 이 `animate` 함수가 선언된 배열 바로 옆의 문자열, `'* => *'`  인데, 이 문자열은 '모든 상태 ⇒ 모든 상태'를 뜻합니다. 이를 통해 적어도  애니메이션 효과는 `'show ⇒ hide'` , `'hide ⇒ show'` , 두 가지 상태 변화에 대해 0.2초의 지연 시간을 가질 것임을 추정할 수 있습니다.
 
 '모든 상태'에는 앱이 실행되고 애니메이션이 설정된 해당 컴포넌트가 렌더링된 상태, 즉 기본 상태(defaul state, initial state 라고도 할 수 있을 것 같네요)도 포함됩니다. 그러므로 이 애니메이션은 사용자가 `trigger` 하지 않는 상황, 다시 말해  `*` 상태라면 제일 먼저 선언된 `state` 함수 속 `style` 함수의 내용에 따라 `transform: 'translateY(-100%)'` 의 스타일링을 가지게 됩니다.
 
@@ -74,7 +74,7 @@ Angular는 [공식 문서](https://angular.io/guide/animations)에서도 볼 수
     </div>
 ```
 
-위의 코드에서 보듯이 템플릿에 트리거(trigger) 이름을 넣어 애니메이션과 연결하게 되므로, **해당 트리거 이름이 들어간 엘레먼트(element)에만 영향**이 있습니다. 컴포넌트의 루트를 가리키는 `:host` 셀렉터는 `.alert-bar` 엘레먼트를 감싸고 있는 상위 엘레먼트를 가리키므로, `:host` 셀렉터로 선언한 스타일링은 애니메이션 옵션에서 지정한 스타일링과 정상적인 병합이 일어나지 않습니다. **트리거 이름을 넣은 엘레먼트에 직접적으로 스타일링을 선언**해주어야 합니다!
+위의 코드에서 보듯이 템플릿에 트리거(trigger) 이름을 넣어 애니메이션과 연결하게 되므로, **해당 트리거 이름이 들어간 엘레먼트(element)에만 영향**이 있습니다. 컴포넌트의 루트를 가리키는 `:host` 셀렉터는 `.alert-bar` 엘레먼트를 감싸고 있는—주로 'app'이라는 접두어가 붙는—엘레먼트를 가리키므로, `:host` 셀렉터로 선언한 스타일링은 애니메이션 옵션에서 지정한 스타일링과 정상적인 병합이 일어나지 않습니다. **트리거 이름을 넣은 엘레먼트에 직접적으로 스타일링을 선언**해주어야 합니다!
 
 제가 구현한 alert-bar 같은 경우 어떤 에러(alert)이 발생하지 않았을 때는, 흔적도 남기지 않기를 원합니다(?). 그래서 저는 alert-bar 컴포넌트를 아래와 같이 루트 템플릿(app.component.html)에 추가했습니다.
 
@@ -98,4 +98,4 @@ Angular는 [공식 문서](https://angular.io/guide/animations)에서도 볼 수
 ```
 
 이제 완성이네요. 내려올 땐 부드럽게 내려오고 사라질 땐 확실히 사라집니다!
-<img src="./../../../images/alert_animation.gif" alt="Alert Bar Animation" style="margin-top: 3rem; width: 100%;" />
+<img src="../../../images/content/alert-animation.gif" alt="Alert Bar Animation" style="margin-top: 3rem; width: 100%; border-radius: 1rem; box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,0.2)" />
