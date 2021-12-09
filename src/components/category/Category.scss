@@ -3,10 +3,6 @@
   justify-self: center;
   width: 80%;
   height: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 20px 0 0 40px;
   i {
     margin-right: 5px;
@@ -20,18 +16,24 @@
     background: none;
     cursor: pointer;
   }
+  .reading-all {
+    display: inline-block;
+  }
   .category-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0;
-    .reading-all {
-      display: inline-block;
-      margin-bottom: 2px;
-    }
   }
   .sub-category {
     margin-top: 10px;
     button {
-      display: inline-block;
+      display: flex;
+      justify-content: space-between;
       padding-left: 20px;
+      span {
+        text-align: left;
+      }
     }
   }
 }
