@@ -42,11 +42,25 @@ const Portfolio = (props) => {
       {/*    </div>*/}
       {/*  </div>*/}
       {/*</Card>*/}
-      <Card>
-        <span>{props.portfolio.title}</span>
-        <span>{props.portfolio.description}</span>
-        <div className="show-me-what-you-got">
-          <SkillIcons skills={props.portfolio.skills} />
+      <Card
+        customClassName="portfolio-card"
+      >
+        <div className="portfolio-bg" style={props.portfolio["color-theme"].card}>
+          <span>{props.portfolio.emoji}</span>
+        </div>
+        <div className="portfolio-title-and-skills">
+          <span className="portfolio-title">{props.portfolio.title}</span>
+          <div className="show-me-what-you-got">
+            <SkillIcons skills={props.portfolio.skills} />
+          </div>
+        </div>
+        <div className="portfolio-description">
+          {props.portfolio.description.map((desc, index) => (
+            <p className="portfolio-description-line" key={index}>
+              <span><i className="fas fa-circle"></i></span>
+              {desc}
+            </p>
+          ))}
         </div>
         <div className="links">
           <a className="play-link" href={props.portfolio.playLink}>
