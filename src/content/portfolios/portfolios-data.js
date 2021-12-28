@@ -12,6 +12,19 @@ export const portfoliosData = [
     emoji: "🍔",
     playLink: "https://burger-finder-6bddb.web.app/",
     githubLink: "https://github.com/babyazalea/burger-finder",
+  },{
+    title: "몽노캄",
+    description: [
+      "Github 저장소를 리스트로 만들어 관리할 수 있습니다.",
+      "프론트엔드는 Angular, 백엔드는 Firebase를 기반입니다.",
+      "Github OAuth를 이용해서 로그인하고, 저장소를 불러옵니다.",
+      "생성한 리스트를 저장(in Firebase)할 수 있습니다.",
+      "CSS 프레임워크를 사용하지 않은, Pure-CSS로 스타일링 되었습니다.",
+    ],
+    skills: ["angular", "firebase"],
+    emoji: "🗂",
+    playLink: "https://mongnokam.web.app/",
+    githubLink: "https://github.com/babyazalea/mongnokam",
   },
 ];
 
