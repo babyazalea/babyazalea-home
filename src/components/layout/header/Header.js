@@ -9,7 +9,7 @@ const Header = (props) => {
 
   useEffect(() => {
     if (!props.noExtension) {
-      headerExtensionClasses.current = `header-extension extending ${props.customClassName}`;
+      headerExtensionClasses.current = `header-extension extending selected-${props.customClassName}`;
     }
   }, [props.noExtension, props.customClassName]);
 

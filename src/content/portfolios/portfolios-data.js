@@ -12,7 +12,8 @@ export const portfoliosData = [
     emoji: "🍔",
     playLink: "https://burger-finder-6bddb.web.app/",
     githubLink: "https://github.com/babyazalea/burger-finder",
-  },{
+  },
+  {
     title: "몽노캄",
     description: [
       "Github 저장소를 리스트로 만들어 관리할 수 있습니다.",
