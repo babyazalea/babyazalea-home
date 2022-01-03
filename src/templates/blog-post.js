@@ -26,23 +26,25 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout customClassName="post-template">
-      <div className="blog-post-caption">
-        <h1>{post.frontmatter.title}</h1>
-        <span>{post.frontmatter.date}</span>
+      <div className="blog-post-wrapper">
+        <div className="blog-post-caption">
+          <h1>{post.frontmatter.title}</h1>
+          <span>{post.frontmatter.date}</span>
+        </div>
+        <br />
+        <br />
+        <article
+          className="blog-post"
+          itemScope
+          itemType="http://schema.org/Article"
+        >
+          <section
+            className="blog-post-section"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
+        </article>
       </div>
-      <br />
-      <br />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <section
-          className="blog-post-section"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-      </article>
     </Layout>
   );
 };
