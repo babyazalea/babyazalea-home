@@ -1,86 +1,17 @@
 header {
   margin-bottom: 30px;
-  div {
-    position: relative;
-    display: flex;
-    align-items: center;
-    div {
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        background-color: var(--beige-color100);
-        border-radius: 50%;
-        border: 1px solid var(--grey-color300);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      }
-    }
-    .header-home-btn {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 3;
-      a {
-        img {
-          width: 60%;
-          height: 60%;
-          opacity: 0.6;
-        }
-      }
-    }
-    .page-back-btn {
-      background-color: var(--beige-color100);
-      border: 1px solid var(--grey-color300);
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      color: #656565;
-      cursor: pointer;
-    }
-    .header-extension {
-      width: 0;
-      height: 60px;
+  border: 1px solid red;
+  width: 100%;
+  height: 10rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  .menus {
+    ul {
       display: flex;
-      justify-content: space-between;
-      transition: all 0.2s;
-      z-index: 1;
-      overflow: hidden;
-      a {
-        width: 40px;
-        height: 40px;
-        background-color: var(--white-color);
-        color: #656565;
-        font-size: 1.2rem;
-      }
-      .header-reading-btn {
-        margin-right: 5px;
-        i {
-          margin-left: 3px;
-        }
-      }
-      .header-portfolios-btn {
-        margin-left: 5px;
-      }
-    }
-    .header-extension.extending {
-      width: 200px;
-      height: 60px;
-    }
-    .header-extension.extending.selected-reading {
-      .header-reading-btn {
-        background-color: var(--amber-color50);
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
-      }
-    }
-    .header-extension.extending.selected-portfolios {
-      .header-portfolios-btn {
-        background-color: var(--amber-color50);
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
-      }
+      gap: 3rem;
     }
   }
 }

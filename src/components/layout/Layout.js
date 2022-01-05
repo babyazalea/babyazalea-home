@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import Header from "./header/Header";
 import Main from "./main/Main";
@@ -7,13 +7,13 @@ import "./Layout.scss";
 
 const Layout = (props) => {
   return (
-    <div className="layout">
+    <Fragment>
       <Header
         noExtension={props.noExtension}
         customClassName={props.customClassName}
       />
       <Main customClassName={props.customClassName}>{props.children}</Main>
-    </div>
+    </Fragment>
   );
 };
 

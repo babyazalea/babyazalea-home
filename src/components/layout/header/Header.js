@@ -15,26 +15,16 @@ const Header = (props) => {
 
   return (
     <header>
-      <div>
-        <div className="header-home-btn">
-          {props.customClassName === "post-template" ? (
-            <button className="page-back-btn" onClick={() => navigate(-1)}>
-              <i className="fas fa-arrow-left"></i>
-            </button>
-          ) : (
-            <Link to="/">
-              <img src={homeIcon} alt="home icon" />
-            </Link>
-          )}
-        </div>
-        <div className={headerExtensionClasses.current}>
-          <Link className="header-portfolios-btn" to="/portfolios">
-            <i className="far fa-file-code"></i>
-          </Link>
-          <Link className="header-reading-btn" to="/reading">
-            <i className="far fa-folder-open"></i>
-          </Link>
-        </div>
+      <div className="logo">
+        <span>babyazalea's home</span>
+      </div>
+      <div className="menus">
+        <ul>
+            <li>읽을거리</li>
+            <li>포트폴리오</li>
+            <li>credits</li>
+            <li>github</li>
+        </ul>
       </div>
     </header>
   );
