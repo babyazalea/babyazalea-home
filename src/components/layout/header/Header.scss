@@ -7,8 +7,27 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
+
+  ul, li {
+    list-style: none;
+  }
+
+  a {
+    color: black;
+  }
+
+  .logo {
+    font-family: "Paytone One", sans-serif;
+    font-size: 1.5rem;
+    .logo-text-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   .menus {
+    font-family: "Noto Sans KR", sans-serif;
     ul {
       display: flex;
       gap: 3rem;

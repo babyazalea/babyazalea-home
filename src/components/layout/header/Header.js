@@ -16,14 +16,37 @@ const Header = (props) => {
   return (
     <header>
       <div className="logo">
-        <span>babyazalea's home</span>
+        <Link to="/">
+          <div className="logo-text-wrapper">
+            <span>babyazalea's</span>
+            <span>home</span>
+          </div>
+        </Link>
       </div>
       <div className="menus">
         <ul>
-            <li>읽을거리</li>
-            <li>포트폴리오</li>
-            <li>credits</li>
-            <li>github</li>
+          <li>
+            <Link to="/">
+              <span>읽을거리</span>
+            </Link>
+          </li>
+          <li>
+            <a href="/">
+              <span>포트폴리오</span>
+            </a>
+          </li>
+          <li>
+            <Link to="/credits">
+              <span>credits</span>
+            </Link>
+          </li>
+          <li>
+            <a href="https://github.com/babyazalea">
+              <span>
+                <i className="fab fa-github"></i>
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
     </header>
