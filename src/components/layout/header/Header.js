@@ -15,40 +15,51 @@ const Header = (props) => {
 
   return (
     <header>
-      <div className="logo">
-        <Link to="/">
-          <div className="logo-text-wrapper">
-            <span>babyazalea's</span>
-            <span>home</span>
-          </div>
-        </Link>
-      </div>
-      <div className="menus">
-        <ul>
-          <li>
-            <Link to="/">
-              <span>읽을거리</span>
-            </Link>
-          </li>
-          <li>
-            <a href="/">
-              <span>포트폴리오</span>
-            </a>
-          </li>
-          <li>
-            <Link to="/credits">
-              <span>credits</span>
-            </Link>
-          </li>
-          <li>
-            <a href="https://github.com/babyazalea">
-              <span>
-                <i className="fab fa-github"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <nav>
+        <div className="logo">
+          <Link to="/">
+            <div className="logo-text-wrapper">
+              <span>babyazalea's</span>
+              <span>home</span>
+            </div>
+          </Link>
+        </div>
+        <div className="menus">
+          <ul>
+            <li>
+              <Link to="/">
+                <span className="lg">읽을거리</span>
+                <span className="sm">
+                  <i className="fas fa-i-cursor"></i>
+                </span>
+              </Link>
+            </li>
+            <li>
+              <a href="/">
+                <span className="lg">포트폴리오</span>
+                <span className="sm">
+                  <i className="fas fa-code"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <Link to="/credits">
+                <span className="lg">크레딧</span>
+                <span className="sm">
+                  <i className="fas fa-flag"></i>
+                </span>
+              </Link>
+            </li>
+            <li>
+              <a href="https://github.com/babyazalea" className="github-link">
+                <span>
+                  <i className="fab fa-github"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
   );
 };

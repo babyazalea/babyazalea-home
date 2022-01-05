@@ -1,36 +1,123 @@
 header {
-  margin-bottom: 30px;
-  border: 1px solid red;
   width: 100%;
-  height: 10rem;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
 
-  ul, li {
-    list-style: none;
-  }
+  nav {
+    margin-bottom: 30px;
+    border: 1px solid red;
+    width: 100%;
+    box-sizing: border-box;
 
-  a {
-    color: black;
-  }
+    ul, li {
+      list-style: none;
+    }
 
-  .logo {
-    font-family: "Paytone One", sans-serif;
-    font-size: 1.5rem;
-    .logo-text-wrapper {
+    a {
+      color: black;
+    }
+
+    .logo {
+      font-family: "Paytone One", sans-serif;
       display: flex;
       flex-direction: column;
-    }
-  }
+      justify-content: center;
+      align-items: center;
 
-  .menus {
-    font-family: "Noto Sans KR", sans-serif;
-    ul {
-      display: flex;
-      gap: 3rem;
+      .logo-text-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .menus {
+      font-family: "Noto Sans KR", sans-serif;
     }
   }
 }
+
+@media (min-width: 768px) {
+  nav {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    .logo {
+      font-size: 1.5rem;
+      width: 10%;
+    }
+
+    .menus {
+      widht: 90%;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        li {
+          .sm {
+            display: none;
+          }
+
+          .github-link {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 5rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+
+    .logo {
+      font-size: 1rem;
+
+      .logo-text-wrapper {
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+    }
+
+    .menus {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        li {
+          .lg {
+            display: none;
+          }
+
+          a {
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .sm {
+              display: block;
+            }
+          }
+
+          .github-link {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
