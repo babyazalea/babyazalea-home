@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 
-import homeIcon from "../../../images/icons/home-icon.svg";
 import "./Header.scss";
 
 const Header = (props) => {
