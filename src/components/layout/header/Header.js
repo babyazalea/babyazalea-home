@@ -35,7 +35,7 @@ const Header = (props) => {
             </li>
             <li>
               <a href="/">
-                <span className="lg">포트폴리오</span>
+                <span className="lg">만든 것들</span>
                 <span className="sm">
                   <i className="fas fa-code"></i>
                 </span>
@@ -45,7 +45,7 @@ const Header = (props) => {
               <Link to="/credits">
                 <span className="lg">크레딧</span>
                 <span className="sm">
-                  <i className="fas fa-flag"></i>
+                  <i className="fas fa-scroll"></i>
                 </span>
               </Link>
             </li>
