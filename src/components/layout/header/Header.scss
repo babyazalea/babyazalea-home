@@ -2,13 +2,16 @@ header {
   width: 100%;
 
   nav {
-    margin-bottom: 30px;
-    border: 1px solid red;
     width: 100%;
-    box-sizing: border-box;
 
-    ul, li {
+    ul,
+    li {
       list-style: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
     }
 
     a {
@@ -38,16 +41,14 @@ header {
   nav {
     height: 10rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 3rem;
 
     .logo {
       font-size: 1.5rem;
     }
 
     .menus {
-
       ul {
         display: flex;
         align-items: center;
@@ -68,54 +69,54 @@ header {
 }
 
 @media (max-width: 768px) {
-  nav {
-    height: 5rem;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
+  header {
+    nav {
+      height: 5rem;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
 
-    .logo {
-      font-size: 1rem;
+      .logo {
+        font-size: 1rem;
 
-      .logo-text-wrapper {
-        padding: 1rem;
-        box-sizing: border-box;
+        .logo-text-wrapper {
+          padding: 1rem;
+          box-sizing: border-box;
+        }
       }
-    }
 
-    .menus {
-      ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3rem;
-        padding: 1rem;
-        box-sizing: border-box;
+      .menus {
+        ul {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 3rem;
+          padding: 1rem;
+          box-sizing: border-box;
 
-        li {
-          .lg {
-            display: none;
-          }
-
-          a {
-            width: 2rem;
-            height: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .sm {
-              display: block;
+          li {
+            .lg {
+              display: none;
             }
-          }
 
-          .github-link {
-            font-size: 1.3rem;
+            a {
+              width: 2rem;
+              height: 2rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .sm {
+                display: block;
+              }
+            }
+
+            .github-link {
+              font-size: 1.3rem;
+            }
           }
         }
       }
     }
   }
 }
-
-

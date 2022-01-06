@@ -7,7 +7,7 @@ const Post = (props) => {
   return (
     <div className="post">
       <Card customClassName="post-card">
-        <h2 className="post-title">{props.reading.title}</h2>
+        <p className="post-title">{props.reading.title}</p>
         <span className="post-written-at">
           {props.reading.date.slice(0, 10)}
         </span>

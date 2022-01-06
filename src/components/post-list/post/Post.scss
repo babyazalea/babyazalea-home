@@ -9,10 +9,26 @@
     .post-title {
       display: inline-block;
       margin-left: 20px;
+      font-weight: bold;
     }
     .post-written-at {
       align-self: flex-end;
       margin: 0 20px 10px 0;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .post-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 1rem;
+  }
+  .post-written-at {
+    font-size: 0.8rem;
   }
 }

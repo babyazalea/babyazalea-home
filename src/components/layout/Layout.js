@@ -7,13 +7,13 @@ import "./Layout.scss";
 
 const Layout = (props) => {
   return (
-    <Fragment>
+    <div className="layout">
       <Header
         noExtension={props.noExtension}
         customClassName={props.customClassName}
       />
       <Main customClassName={props.customClassName}>{props.children}</Main>
-    </Fragment>
+    </div>
   );
 };
 

@@ -3,9 +3,8 @@
   justify-self: center;
   width: 80%;
   height: 20%;
-  margin: 20px 0 0 40px;
   i {
-    margin-right: 5px;
+    margin-right: 1rem;
   }
   ul,
   li {
@@ -35,5 +34,17 @@
         text-align: left;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .category {
+    margin: 1rem 0 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .category {
+    margin-bottom: 1rem;
   }
 }

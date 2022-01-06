@@ -1,6 +1,5 @@
 .page-tunner {
   width: 80%;
-  margin-top: 20px;
   ul,
   li {
     list-style: none;
@@ -26,5 +25,18 @@
   }
   .highlighted {
     background-color: var(--amber-color100);
+  }
+}
+
+@media (min-width: 768px) {
+  .page-tunner {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-tunner {
+    padding-bottom: 1rem;
+    box-sizing: border-box;
   }
 }
