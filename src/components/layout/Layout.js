@@ -7,7 +7,7 @@ import "./Layout.scss";
 
 const Layout = (props) => {
   return (
-    <div className="layout">
+    <div className={`layout ${props.customClassName}`}>
       <Header
         noExtension={props.noExtension}
         customClassName={props.customClassName}

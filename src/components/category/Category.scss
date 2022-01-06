@@ -1,8 +1,7 @@
 .category {
-  position: sticky;
-  justify-self: center;
-  width: 80%;
-  height: 20%;
+  > div {
+    width: 80%;
+  }
   i {
     margin-right: 1rem;
   }
@@ -39,7 +38,11 @@
 
 @media (min-width: 768px) {
   .category {
-    margin: 1rem 0 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    .category-sm {
+      display: none;
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 .page-tunner {
   width: 80%;
+  margin-top: 1rem;
   ul,
   li {
     list-style: none;
@@ -29,9 +30,6 @@
 }
 
 @media (min-width: 768px) {
-  .page-tunner {
-    margin-top: 1.5rem;
-  }
 }
 
 @media (max-width: 768px) {
