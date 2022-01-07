@@ -49,5 +49,12 @@
 @media (max-width: 768px) {
   .category {
     margin-bottom: 1rem;
+    .category-lg {
+      display: none;
+    }
+    .category-sm {
+      display: block;
+      margin: 3rem 0;
+    }
   }
 }

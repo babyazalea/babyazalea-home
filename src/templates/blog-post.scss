@@ -11,10 +11,14 @@
 }
 
 .blog-post-section {
+  font-family: "Noto Sans KR", sans-serif;
   a {
     color: #0353a4;
   }
   p {
     line-height: 2rem;
+  }
+  code {
+    margin-bottom: 1rem;
   }
 }
