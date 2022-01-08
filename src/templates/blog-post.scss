@@ -22,3 +22,11 @@
     margin-bottom: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .blog-post-wrapper {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+}

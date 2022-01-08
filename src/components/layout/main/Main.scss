@@ -2,7 +2,8 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 main.portfolios {
@@ -15,13 +16,6 @@ main.portfolios {
   gap: 5rem;
   padding: 0;
   overflow: hidden;
-}
-
-main.post-template {
-  overflow: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .top {
@@ -51,6 +45,10 @@ main.post-template {
 }
 
 @media (max-width: 768px) {
+  main {
+    scrollbar-width: none;
+  }
+
   main > .reading {
     display: flex;
     flex-direction: column;
