@@ -6,16 +6,11 @@
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
   a {
     text-decoration: none;
     color: inherit;
-  }
-}
-
-@media (min-width: 768px) {
-  .layout {
-    display: grid;
-    grid-template-rows: 1fr 10fr;
   }
 }
 

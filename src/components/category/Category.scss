@@ -1,4 +1,6 @@
 .category {
+  display: flex;
+  justify-content: flex-end;
   > div {
     width: 80%;
   }
@@ -34,27 +36,21 @@
       }
     }
   }
-}
 
-@media (min-width: 768px) {
-  .category {
-    display: flex;
-    justify-content: flex-end;
-    .category-sm {
-      display: none;
-    }
+  .category-sm {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .category {
-    margin-bottom: 1rem;
+    justify-content: stretch;
     .category-lg {
       display: none;
     }
     .category-sm {
       display: block;
-      margin: 3rem 0;
+      // margin: 3rem 0;
     }
   }
 }

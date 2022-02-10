@@ -1,5 +1,5 @@
 .blog-post-wrapper {
-  width: 50%;
+  width: 60%;
 }
 
 .blog-post-caption {
@@ -20,6 +20,17 @@
   }
   code {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .blog-post-caption {
+    display: grid;
+    align-content: center;
+    justify-content: stretch;
+    span {
+      justify-self: flex-end;
+    }
   }
 }
 

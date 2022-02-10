@@ -18,14 +18,27 @@
   }
   li {
     width: 100%;
+    a {
+      display: block;
+      width: 100%;
+    }
   }
-}
-
-@media (min-width: 768px) {
 }
 
 @media (max-width: 768px) {
   .post-list {
     margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .post-list {
+    width: 100%;
   }
 }
