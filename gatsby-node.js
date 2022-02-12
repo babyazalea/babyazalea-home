@@ -6,18 +6,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
+  // must be changed result
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
+        allContentfulBlog {
           nodes {
-            id
-            fields {
-              slug
-            }
+            title
+            contentful_id
           }
         }
       }
@@ -32,7 +28,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const posts = result.data.allMarkdownRemark.nodes;
+  // must be changed posts
+  const posts = result.data.allContentfulBlog.nodes;
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
@@ -41,7 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         index === posts.length - 1 ? null : posts[index + 1].id;
 
       createPage({
-        path: `/reading${post.fields.slug}`,
+        path: `/reading${post["contentful_id"]}`,
         component: blogPost,
         context: {
           id: post.id,

@@ -44,5 +44,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `mmula1e99w8h`,
+        accessToken: `_HY_oapG_f0EsKU5i3dgtCXySD9NjPK5jz-C62bn1GE`,
+        // host: `preview.contentful.com`,
+      },
+    },
   ],
 };
