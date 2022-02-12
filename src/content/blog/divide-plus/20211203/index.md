@@ -98,4 +98,6 @@ Angular는 [공식 문서](https://angular.io/guide/animations)에서도 볼 수
 ```
 
 이제 완성이네요. 내려올 땐 부드럽게 내려오고 사라질 땐 확실히 사라집니다!
-<img src="../../../../images/content/alert-animation.gif" alt="Alert Bar Animation" style="margin-top: 3rem; width: 100%; border-radius: 1rem; box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,0.2)" />
+<div style="width: 100%; margin-top: 3rem; display: flex; justify-content: center;">
+<img src="../../../../images/content/alert-animation.gif" alt="Alert Bar Animation" style="width: 80%; border-radius: 1rem; box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,0.2)" />
+</div>
