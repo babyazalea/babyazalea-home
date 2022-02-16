@@ -87,12 +87,6 @@ header {
     height: 5rem;
 
     nav {
-      width: 100%;
-      display: grid;
-      justify-content: space-between;
-      align-content: center;
-      grid-template-columns: 1fr 2fr;
-
       .logo {
         font-size: 0.8rem;
 
@@ -106,12 +100,14 @@ header {
         ul {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
+          gap: 3rem;
           padding: 1rem;
           box-sizing: border-box;
+
           li {
             display: flex;
             justify-content: center;
+
             .lg {
               display: none;
             }
@@ -139,9 +135,10 @@ header {
 }
 
 @media (max-width: 500px) {
-  //header {
-  //  nav {
-  //    padding: 0 2rem 0 2rem;
-  //  }
-  //}
+  header {
+    height: 10%;
+    nav {
+      width: 100%;
+    }
+  }
 }
