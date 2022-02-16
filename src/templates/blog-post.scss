@@ -2,9 +2,14 @@
   width: 60%;
 }
 
+.blog-post-wrapper article {
+  padding-bottom: 2rem;
+}
+
 .blog-post-caption {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 7rem;
   span {
     align-self: flex-end;
   }
@@ -16,14 +21,19 @@
     color: #0353a4;
   }
   p {
-    line-height: 2rem;
+    line-height: 1.8;
+    font-weight: 300;
   }
   code {
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
+  .blog-post-wrapper {
+    width: 80%;
+  }
+
   .blog-post-caption {
     display: grid;
     align-content: center;

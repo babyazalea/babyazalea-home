@@ -44,12 +44,13 @@
 
 @media (max-width: 768px) {
   .category {
-    justify-content: stretch;
+    justify-content: center;
     .category-lg {
       display: none;
     }
     .category-sm {
-      display: block;
+      display: flex;
+      justify-content: center;
     }
   }
 }

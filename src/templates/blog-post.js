@@ -31,8 +31,6 @@ const BlogPostTemplate = ({ data }) => {
           <h1>{post.frontmatter.title}</h1>
           <span>{post.frontmatter.date}</span>
         </div>
-        <br />
-        <br />
         <article
           className="blog-post"
           itemScope
