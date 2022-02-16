@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
 import "./blog-post.scss";
+import Seo from "../components/seo/seo";
 
 export const query = graphql`
   query PostQuery($id: String!) {
@@ -26,6 +27,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout customClassName="post-template">
+      <Seo title={post.frontmatter.title} />
       <div className="blog-post-wrapper">
         <div className="blog-post-caption">
           <h1>{post.frontmatter.title}</h1>

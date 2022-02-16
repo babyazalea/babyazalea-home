@@ -5,6 +5,7 @@ import Layout from "../components/layout/Layout";
 import Category from "../components/category/Category";
 import PostList from "../components/post-list/PostList";
 import PageTunner from "../components/post-list/page-tunner/PageTunner";
+import Seo from "../components/seo/seo";
 
 export const query = graphql`
   query blogQuery {
@@ -98,6 +99,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout customClassName="reading">
+      <Seo title="읽을거리" />
       <Category
         subCategorys={categorys}
         categoryHandler={categoryHandler}
