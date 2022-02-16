@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "gatsby";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faICursor, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 import "./Header.scss";
 
 const Header = (props) => {
@@ -29,30 +32,17 @@ const Header = (props) => {
               <Link to="/">
                 <span className="lg">읽을거리</span>
                 <span className="sm">
-                  <i className="fas fa-i-cursor"></i>
+                  <FontAwesomeIcon icon={faICursor} />
                 </span>
               </Link>
             </li>
             <li>
-              <a href="/">
-                <span className="lg">만든 것들</span>
-                <span className="sm">
-                  <i className="fas fa-code"></i>
+              <a href="mailto:usun16@gmail.com">
+                <span className="lg mail-icon">
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </span>
-              </a>
-            </li>
-            <li>
-              <Link to="/credits">
-                <span className="lg">크레딧</span>
                 <span className="sm">
-                  <i className="fas fa-scroll"></i>
-                </span>
-              </Link>
-            </li>
-            <li>
-              <a href="https://github.com/babyazalea" className="github-link">
-                <span>
-                  <i className="fab fa-github"></i>
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </span>
               </a>
             </li>

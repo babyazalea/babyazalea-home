@@ -1,5 +1,8 @@
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolder } from "@fortawesome/free-regular-svg-icons";
+
 import "./Category.scss";
 
 const Category = (props) => {
@@ -18,7 +21,7 @@ const Category = (props) => {
           className="reading-all"
           onClick={() => props.categoryInitializer()}
         >
-          <i className="far fa-folder"></i>
+          <FontAwesomeIcon icon={faFolder} />
           모든 글
         </button>
         <ul className="category-wrapper">
@@ -26,7 +29,7 @@ const Category = (props) => {
             return (
               <li key={index} className="sub-category">
                 <button onClick={() => props.categoryHandler(category)}>
-                  <i className="far fa-folder"></i>
+                  <FontAwesomeIcon icon={faFolder} />
                   <span>{category}</span>
                 </button>
               </li>
