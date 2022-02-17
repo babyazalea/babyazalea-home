@@ -2,11 +2,11 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://babyazalea.gatsbyjs.io",
     title: "babyazaela's home",
-    description: "babyazalea의 Gatsby 블로그"
+    description: "babyazalea의 Gatsby 블로그",
   },
   plugins: [
     "gatsby-plugin-sass",
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

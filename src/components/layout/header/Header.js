@@ -17,7 +17,7 @@ const Header = (props) => {
 
   return (
     <header>
-      <nav>
+      <nav className="flex flex-row">
         <div className="logo">
           <Link to="/">
             <div className="logo-text-wrapper">
