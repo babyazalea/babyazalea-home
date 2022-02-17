@@ -2,7 +2,8 @@ import React from "react";
 
 import gcLogo from "../../../images/logos/gatsby-cloud.svg";
 import gatsbyLogo from "../../../images/logos/gatsby.svg";
-import "./Footer.scss";
+
+// import "./Footer.scss";
 
 const Footer = (props) => {
   return (

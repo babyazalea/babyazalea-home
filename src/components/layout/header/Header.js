@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faICursor, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import "./Header.scss";
+// import "./Header.scss";
 
 const Header = (props) => {
   const headerExtensionClasses = useRef("header-extension");

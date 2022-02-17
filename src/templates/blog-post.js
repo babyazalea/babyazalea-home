@@ -2,8 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout/Layout";
-import "./blog-post.scss";
 import Seo from "../components/seo/seo";
+
+// import "./blog-post.scss";
 
 export const query = graphql`
   query PostQuery($id: String!) {

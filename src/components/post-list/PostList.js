@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import Post from "./post/Post";
 
-import "./PostList.scss";
+// import "./PostList.scss";
 
 const PostList = (props) => {
   return (

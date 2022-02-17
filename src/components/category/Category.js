@@ -3,7 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder } from "@fortawesome/free-regular-svg-icons";
 
-import "./Category.scss";
+// import "./Category.scss";
 
 const Category = (props) => {
   const categorySelectHandler = (event) => {

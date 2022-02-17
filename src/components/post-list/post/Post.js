@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../../ui/card/Card";
 
-import "./Post.scss";
+// import "./Post.scss";
 
 const Post = (props) => {
   return (

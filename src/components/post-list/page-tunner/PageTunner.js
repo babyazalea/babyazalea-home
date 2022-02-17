@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./PageTunner.scss";
+// import "./PageTunner.scss";
 
 const PageTunner = (props) => {
   const pageIndicators = ["1"];

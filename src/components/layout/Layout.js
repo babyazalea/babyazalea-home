@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./header/Header";
 import Main from "./main/Main";
 
-import "./Layout.scss";
+// import "./Layout.scss";
 
 const Layout = (props) => {
   return (
