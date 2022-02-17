@@ -4,6 +4,7 @@ import Header from "./header/Header";
 import Main from "./main/Main";
 
 import "./Layout.scss";
+import Footer from "./footer/Footer";
 
 const Layout = (props) => {
   return (
@@ -13,6 +14,7 @@ const Layout = (props) => {
         customClassName={props.customClassName}
       />
       <Main customClassName={props.customClassName}>{props.children}</Main>
+      <Footer />
     </div>
   );
 };

@@ -6,8 +6,12 @@
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  display: grid;
-  grid-template-rows: 1fr 10fr;
+  //display: grid;
+  //grid-template-rows: 1fr 9fr 0.5fr;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
   a {
     text-decoration: none;
     color: inherit;
