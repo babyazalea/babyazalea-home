@@ -17,16 +17,21 @@ const Category = (props) => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="sm:max-w-lg md:max-w-xl sm:w-fit hidden sm:flex sm:flex-row sm:gap-5 sm:flex-wrap sm:p-2 sm:justify-center">
-        <button onClick={() => props.categoryInitializer()}>
-          <FontAwesomeIcon icon={faBars} />
-          <span className="ml-2">모든 글</span>
+      <div className="sm:max-w-lg md:max-w-xl sm:w-fit hidden sm:flex sm:flex-wrap sm:gap-4 sm:p-2 sm:justify-center">
+        <button
+          className="sm:flex sm:items-center border border-black-100 shadow-sm p-2 rounded-md"
+          onClick={() => props.categoryInitializer()}
+        >
+          <span className="text-sm">모든 글</span>
         </button>
         {props.subCategorys.map((category) => {
           return (
-            <button onClick={() => props.categoryHandler(category)}>
-              <FontAwesomeIcon icon={faFolder} />
-              <span className="ml-2">{category}</span>
+            <button
+              className="sm:flex sm:items-center border border-black-100 shadow-sm p-2 rounded-md"
+              key={category}
+              onClick={() => props.categoryHandler(category)}
+            >
+              <span className="text-sm">{category}</span>
             </button>
           );
         })}
