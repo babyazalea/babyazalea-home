@@ -17,7 +17,7 @@ const PageTunner = (props) => {
       : "page-indicator";
 
   return (
-    <div className="page-tunner">
+    <div>
       <ul>
         {pageIndicators.map((pageIndicator, index) => (
           <li className={indicatorClasses(parseInt(pageIndicator))} key={index}>

@@ -102,10 +102,11 @@ const IndexPage = ({ data }) => {
       <Seo title="읽을거리" />
       <Category
         subCategorys={categories}
+        selectedCategory={selectedCategory}
         categoryHandler={categoryHandler}
         categoryInitializer={categoryInitializer}
       />
-      <div className="post-part">
+      <div className="w-full flex-1 flex flex-col">
         <PostList readings={showingReadings} />
         <PageTunner
           readingsNumber={readingsNumber}

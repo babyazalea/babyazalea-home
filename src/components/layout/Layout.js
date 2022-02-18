@@ -9,7 +9,7 @@ const Layout = (props) => {
   return (
     <div className="flex flex-col w-full h-screen p-0 m-0">
       <Header />
-      <Main customClassName={props.customClassName}>{props.children}</Main>
+      <Main>{props.children}</Main>
     </div>
   );
 };

@@ -16,10 +16,12 @@ const Category = (props) => {
   };
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center mb-16">
       <div className="sm:max-w-lg md:max-w-xl sm:w-fit hidden sm:flex sm:flex-wrap sm:gap-4 sm:p-2 sm:justify-center">
         <button
-          className="sm:flex sm:items-center border border-black-100 shadow-sm p-2 rounded-md"
+          className={`sm:flex sm:items-center border border-black-100 shadow-sm p-2 rounded-md ${
+            props.selectedCategory === null && "bg-neutral-200"
+          }`}
           onClick={() => props.categoryInitializer()}
         >
           <span className="text-sm">모든 글</span>
@@ -27,7 +29,9 @@ const Category = (props) => {
         {props.subCategorys.map((category) => {
           return (
             <button
-              className="sm:flex sm:items-center border border-black-100 shadow-sm p-2 rounded-md"
+              className={`sm:flex sm:items-center border border-black-100 shadow-sm p-2 rounded-md ${
+                props.selectedCategory === category && "bg-neutral-200"
+              }`}
               key={category}
               onClick={() => props.categoryHandler(category)}
             >

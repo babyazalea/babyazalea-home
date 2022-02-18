@@ -7,8 +7,8 @@ import Post from "./post/Post";
 
 const PostList = (props) => {
   return (
-    <div className="post-list">
-      <ul>
+    <div className="w-full flex justify-center basis-10/12">
+      <ul className="w-5/12">
         {props.readings.map((reading) => (
           <li key={reading.id}>
             <Link to={`../reading${reading.fields.slug}`}>

@@ -2,22 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faICursor, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 // import "./Header.scss";
 
-const Header = (props) => {
-  const headerExtensionClasses = useRef("header-extension");
-
-  useEffect(() => {
-    if (!props.noExtension) {
-      headerExtensionClasses.current = `header-extension extending selected-${props.customClassName}`;
-    }
-  }, [props.noExtension, props.customClassName]);
-
+const Header = () => {
   return (
     <header className="w-full h-24">
-      <nav className="flex flex-row justify-around sm:justify-between items-center w-full h-24 sm:px-20">
+      <nav className="flex flex-row items-center w-full h-24 justify-between px-10 sm:p-0 sm:justify-around sm:gap-x-32 md:justify-around lg:justify-evenly">
         <div className="logo">
           <Link to="/">
             <div>
@@ -26,19 +18,11 @@ const Header = (props) => {
           </Link>
         </div>
         <div>
-          <ul className="flex flex-row gap-10 sm:gap-7">
-            <li>
-              <Link to="/">
-                <span className="hidden sm:block">읽을거리</span>
-                <span className="sm:hidden">
-                  <FontAwesomeIcon icon={faICursor} />
-                </span>
-              </Link>
-            </li>
+          <ul className="flex flex-row">
             <li>
               <a href="mailto:usun16@gmail.com">
                 <span>
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <FontAwesomeIcon icon={faEnvelope} size={"lg"} />
                 </span>
               </a>
             </li>
