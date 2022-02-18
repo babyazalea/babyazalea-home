@@ -16,32 +16,28 @@ const Header = (props) => {
   }, [props.noExtension, props.customClassName]);
 
   return (
-    <header>
-      <nav className="flex flex-row">
+    <header className="mx-auto h-24">
+      <nav className="flex flex-row justify-around sm:justify-around items-center h-full">
         <div className="logo">
           <Link to="/">
-            <div className="logo-text-wrapper">
-              <span>babyazalea's</span>
-              <span>home</span>
+            <div>
+              <span>tyange-blog</span>
             </div>
           </Link>
         </div>
-        <div className="menus">
-          <ul>
+        <div>
+          <ul className="flex flex-row gap-10 sm:gap-7">
             <li>
               <Link to="/">
-                <span className="lg">읽을거리</span>
-                <span className="sm">
+                <span className="hidden sm:block">읽을거리</span>
+                <span className="sm:hidden">
                   <FontAwesomeIcon icon={faICursor} />
                 </span>
               </Link>
             </li>
             <li>
               <a href="mailto:usun16@gmail.com">
-                <span className="lg mail-icon">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <span className="sm">
+                <span>
                   <FontAwesomeIcon icon={faEnvelope} />
                 </span>
               </a>
