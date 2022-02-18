@@ -7,11 +7,8 @@ import Main from "./main/Main";
 
 const Layout = (props) => {
   return (
-    <div className={`layout ${props.customClassName}`}>
-      <Header
-        noExtension={props.noExtension}
-        customClassName={props.customClassName}
-      />
+    <div className="flex flex-col w-full h-screen p-0 m-0">
+      <Header />
       <Main customClassName={props.customClassName}>{props.children}</Main>
     </div>
   );

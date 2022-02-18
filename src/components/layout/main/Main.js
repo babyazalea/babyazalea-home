@@ -4,8 +4,8 @@ import React from "react";
 
 const Main = (props) => {
   return (
-    <main>
-      <div className={props.customClassName}>{props.children}</div>
+    <main className="flex-1">
+      <div>{props.children}</div>
     </main>
   );
 };
