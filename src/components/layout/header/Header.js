@@ -16,8 +16,8 @@ const Header = (props) => {
   }, [props.noExtension, props.customClassName]);
 
   return (
-    <header className="w-full mx-auto h-24">
-      <nav className="flex flex-row justify-around sm:justify-around items-center w-full h-24">
+    <header className="w-full h-24">
+      <nav className="flex flex-row justify-around sm:justify-between items-center w-full h-24 sm:px-20">
         <div className="logo">
           <Link to="/">
             <div>

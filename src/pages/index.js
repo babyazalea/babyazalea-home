@@ -28,7 +28,7 @@ export const query = graphql`
 const IndexPage = ({ data }) => {
   const allReadings = data.allMarkdownRemark.nodes;
   const maximumPostsNumber = 4;
-  const categorys =
+  const categories =
     allReadings !== null
       ? [
           ...new Set(
@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
     <Layout customClassName="reading">
       <Seo title="읽을거리" />
       <Category
-        subCategorys={categorys}
+        subCategorys={categories}
         categoryHandler={categoryHandler}
         categoryInitializer={categoryInitializer}
       />
