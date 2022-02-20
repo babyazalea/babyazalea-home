@@ -4,21 +4,22 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import Category from "../components/category/Category";
 import PostList from "../components/post-list/PostList";
-import PageTunner from "../components/post-list/page-tunner/PageTunner";
+import PageTurner from "../components/post-list/page-turner/PageTurner";
 import Seo from "../components/seo/seo";
 
 export const query = graphql`
   query blogQuery {
-    allMarkdownRemark {
+   allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         id
-        frontmatter {
-          title
-          date
-          category
-        }
+        excerpt
         fields {
           slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          category
         }
       }
     }
@@ -77,6 +78,7 @@ const IndexPage = ({ data }) => {
   }, [selectedCategory, allReadings, selectedPageNum]);
 
   const categoryHandler = (categoryName) => {
+    setSelectedPageNum(1);
     setSelectedCategory(categoryName);
   };
 
@@ -108,7 +110,7 @@ const IndexPage = ({ data }) => {
       />
       <div className="w-full flex-1 flex flex-col">
         <PostList readings={showingReadings} />
-        <PageTunner
+        <PageTurner
           readingsNumber={readingsNumber}
           selectedPageNum={selectedPageNum}
           selectPageNumHandler={selectPageNumHandler}
