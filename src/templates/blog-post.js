@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import Seo from "../components/seo/seo";
 
-// import "./blog-post.scss";
 
 export const query = graphql`
   query PostQuery($id: String!) {

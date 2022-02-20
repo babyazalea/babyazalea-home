@@ -3,8 +3,6 @@ import { Link } from "gatsby";
 
 import Post from "./post/Post";
 
-// import "./PostList.scss";
-
 const PostList = (props) => {
   return (
     <div className="w-full flex justify-center basis-10/12 mb-10">

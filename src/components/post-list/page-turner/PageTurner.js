@@ -1,7 +1,5 @@
 import React from "react";
 
-// import "./PageTunner.scss";
-
 const PageTurner = (props) => {
   const pageIndicators = ["1"];
 

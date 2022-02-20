@@ -1,11 +1,5 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolder } from "@fortawesome/free-regular-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-// import "./Category.scss";
-
 const Category = (props) => {
   const categorySelectHandler = (event) => {
     if (event.target.value === "reading-all") {
