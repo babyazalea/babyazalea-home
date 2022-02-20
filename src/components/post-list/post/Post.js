@@ -1,17 +1,20 @@
 import React from "react";
-import Card from "../../ui/card/Card";
-
-// import "./Post.scss";
 
 const Post = (props) => {
+  let createdAt;
+
+  if (props.reading.date) {
+    createdAt = new Date(props.reading.date);
+  }
+
   return (
-    <div className="post">
-      <Card customClassName="post-card">
-        <span className="post-title">{props.reading.title}</span>
-        <span className="post-written-at">
-          {props.reading.date.slice(0, 10)}
-        </span>
-      </Card>
+    <div className="flex flex-col mt-8">
+      <p className="text-xl font-bold font-serif">{props.reading.title}</p>
+      <span className="text-xs mt-3 mb-5 font-serif">
+        {createdAt.getFullYear()}년 {createdAt.getMonth() + 1}월{" "}
+        {createdAt.getDate()}일
+      </span>
+      <p className="text-sm font-serif">{props.excerpt}</p>
     </div>
   );
 };
