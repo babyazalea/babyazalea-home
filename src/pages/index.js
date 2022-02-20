@@ -110,11 +110,13 @@ const IndexPage = ({ data }) => {
       />
       <div className="w-full flex-1 flex flex-col">
         <PostList readings={showingReadings} />
-        <PageTurner
-          readingsNumber={readingsNumber}
-          selectedPageNum={selectedPageNum}
-          selectPageNumHandler={selectPageNumHandler}
-        />
+        {readingsNumber >= 5 && (
+          <PageTurner
+            readingsNumber={readingsNumber}
+            selectedPageNum={selectedPageNum}
+            selectPageNumHandler={selectPageNumHandler}
+          />
+        )}
       </div>
     </Layout>
   );
