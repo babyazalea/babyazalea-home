@@ -6,9 +6,7 @@ import Seo from "../components/seo/seo";
 import gatsbyLogo from "../images/logos/Gatsby-Logo.svg";
 import tailwindCssLogo from "../images/logos/tailwindcss-logotype.svg";
 import gcLogo from "../images/logos/Cloud.svg";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFontAwesome } from "@fortawesome/free-regular-svg-icons";
+import fontawesomeLogo from "../images/logos/font-awesome-solid.svg"
 
 const Credits = () => {
   return (
@@ -36,7 +34,7 @@ const Credits = () => {
               href="https://www.gatsbyjs.com/products/cloud/"
             >
               <img
-                className="w-20 h-15 sm:h-20"
+                className="w-20 h-15 sm:h-20 lg:w-28"
                 src={gcLogo}
                 alt="Gatsby Cloud Logo"
               />
@@ -47,12 +45,12 @@ const Credits = () => {
               className="w-fit h-fit"
               href="https://fonts.google.com/noto/specimen/Noto+Sans+KR"
             >
-              <span className="text-md sm:text-3xl">Noto Sans KR</span>
+              <span className="text-xl sm:text-3xl">Noto Sans KR</span>
             </a>
           </li>
           <li className="flex justify-center">
             <a href="https://fontawesome.com/">
-              <FontAwesomeIcon icon={faFontAwesome} size={"3x"} />
+              <img className="w-12 md:w-16 sm:w-14" src={fontawesomeLogo} alt="fontawesome logo" />
             </a>
           </li>
         </ul>
