@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope, faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 
 const Header = () => {
   return (
@@ -16,13 +16,20 @@ const Header = () => {
           </Link>
         </div>
         <div>
-          <ul className="flex flex-row">
+          <ul className="flex flex-row gap-5">
             <li>
               <a href="mailto:usun16@gmail.com">
                 <span>
                   <FontAwesomeIcon icon={faEnvelope} size={"lg"} />
                 </span>
               </a>
+            </li>
+            <li>
+              <Link href="/credits">
+                <span>
+                  <FontAwesomeIcon icon={faCircleQuestion} size={"lg"} />
+                </span>
+              </Link>
             </li>
           </ul>
         </div>

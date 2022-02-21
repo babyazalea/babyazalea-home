@@ -9,7 +9,7 @@ const Layout = (props) => {
   return (
     <div className="flex flex-col w-screen h-screen p-0 m-0 font-sans">
       <Header />
-      <Main isBlogPost={props.isBlogPost}>{props.children}</Main>
+      <Main isCredits={props.isCredits} isBlogPost={props.isBlogPost}>{props.children}</Main>
     </div>
   );
 };
