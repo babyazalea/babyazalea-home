@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 
+import tyangeLogo from "../../../images/logos/tyange-logo.svg";
+
 const Header = () => {
   return (
     <header className="w-full h-24">
@@ -11,7 +13,7 @@ const Header = () => {
         <div className="logo">
           <Link to="/">
             <div>
-              <span>tyange-blog</span>
+              <img className="pt-1" src={tyangeLogo} alt="tyange logo" />
             </div>
           </Link>
         </div>
