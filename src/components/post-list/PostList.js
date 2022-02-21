@@ -5,8 +5,8 @@ import Post from "./post/Post";
 
 const PostList = (props) => {
   return (
-    <div className="w-full flex justify-center basis-10/12 mb-10">
-      <ul className="xl:w-5/12 md:w-6/12 sm:w-8/12 w-9/12 flex flex-col gap-8 divide-y">
+    <div className="w-full flex justify-center mb-10">
+      <ul className="max-w-2xl lg:max-w-lg md:w-7/12 sm:w-9/12 w-10/12 flex flex-col gap-8 divide-y">
         {props.readings.map((reading) => (
           <li key={reading.id} >
             <Link to={`../reading${reading.fields.slug}`}>
