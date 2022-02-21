@@ -10,7 +10,7 @@ const PageTurner = (props) => {
 
   return (
     <div className="flex justify-center p-5">
-      <ul className="flex gap-5 w-1/3">
+      <ul className="flex gap-4 w-1/3">
         {pageIndicators.map((pageIndicator, index) => (
           <li key={index}>
             <button
