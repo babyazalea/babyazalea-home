@@ -39,7 +39,7 @@ const Header = (props) => {
               </a>
             </li>
             <li>
-              <Link href="/credits">
+              <Link href="/credits/">
                 <span>
                   <FontAwesomeIcon icon={faCircleQuestion} size={"lg"} />
                 </span>
