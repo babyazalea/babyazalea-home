@@ -1,23 +1,26 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import githubIcon from "../../../images/logos/github-brands.svg";
+import twitterIcon from "../../../images/logos/twitter-brands.svg";
 
 const Footer = () => {
   return (
     <footer className="w-full flex flex-col items-center justify-center gap-3 mb-5">
       <div className="flex gap-3">
-        <a href="https://github.com/tyange" className="text-black sm:text-gray-500 hover:text-black">
-          <FontAwesomeIcon icon={faGithub} size={"lg"} />
+        <a
+          href="https://github.com/tyange"
+        >
+          <img className="w-5 opacity-60 hover:opacity-100" src={githubIcon} alt="Github icon" />
         </a>
-        <a href="https://twitter.com/twit_tyange" className="text-black sm:text-gray-500 hover:text-black">
-          <FontAwesomeIcon icon={faTwitter} size={"lg"} />
+        <a
+          href="https://twitter.com/twit_tyange"
+        >
+          <img className="w-5 opacity-60 hover:opacity-100" src={twitterIcon} alt="Twitter Icon" />
         </a>
       </div>
       <div className="flex items-center gap-1 text-xs">
         <span>
-          <FontAwesomeIcon icon={faCopyright} />
+          ©
         </span>
         <span>{new Date().getFullYear()}</span>
         <span>tyange</span>
