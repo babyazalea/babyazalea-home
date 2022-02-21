@@ -12,7 +12,7 @@ import { faFontAwesome } from "@fortawesome/free-regular-svg-icons";
 const Credits = () => {
   return (
     <Layout isCredits="true">
-      <div className="w-full h-full flex flex-col items-center justify-center font-sans font-light mb-20">
+      <div className="w-full h-full flex flex-col items-center justify-center font-sans font-light mb-12">
         <ul className="w-4/12 flex flex-col gap-10 justify-center">
           <li className="flex justify-center">
             <a className="w-fit h-fit" href="https://www.gatsbyjs.com/">
