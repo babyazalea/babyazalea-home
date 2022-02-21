@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://babyazalea.gatsbyjs.io",
-    title: "babyazaela's home",
-    description: "babyazalea의 Gatsby 블로그",
+    title: "tyange",
+    description: "tyange의 Gatsby 블로그",
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-postcss",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
@@ -30,16 +29,6 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
           {
             resolve: `gatsby-remark-copy-linked-files`,
           },
