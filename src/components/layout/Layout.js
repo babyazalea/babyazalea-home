@@ -9,9 +9,11 @@ const Layout = (props) => {
 
   return (
     <div className="flex flex-col w-screen h-screen p-0 m-0 font-sans overflow-x-hidden">
-      <Header />
-      <Main isCredits={props.isCredits} isBlogPost={props.isBlogPost}>{props.children}</Main>
-      <Footer/>
+      <Header categoryInitializer={props.categoryInitializer} />
+      <Main isCredits={props.isCredits} isBlogPost={props.isBlogPost}>
+        {props.children}
+      </Main>
+      <Footer />
     </div>
   );
 };

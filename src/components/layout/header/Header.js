@@ -1,21 +1,33 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+import {
+  faEnvelope,
+  faCircleQuestion,
+} from "@fortawesome/free-regular-svg-icons";
 
 import tyangeLogo from "../../../images/logos/tyange-logo.svg";
 
-const Header = () => {
+const Header = (props) => {
+  const homeButtonHandler = () => {
+    if(props.categoryInitializer) {
+      props.categoryInitializer();
+      navigate("/");
+    }
+
+    navigate("/");
+  }
+
   return (
     <header className="w-full h-24">
       <nav className="flex flex-row items-center w-full h-24 justify-between px-10 md:p-0 md:gap-x-32 md:justify-around lg:justify-evenly">
         <div className="logo">
-          <Link to="/">
+          <button onClick={() => homeButtonHandler()}>
             <div>
               <img className="pt-1" src={tyangeLogo} alt="tyange logo" />
             </div>
-          </Link>
+          </button>
         </div>
         <div>
           <ul className="flex flex-row gap-5">

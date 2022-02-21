@@ -9,7 +9,7 @@ import Seo from "../components/seo/seo";
 
 export const query = graphql`
   query blogQuery {
-   allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         id
         excerpt
@@ -83,6 +83,7 @@ const IndexPage = ({ data }) => {
   };
 
   const categoryInitializer = () => {
+    setSelectedPageNum(1);
     setSelectedCategory(null);
   };
 
@@ -100,7 +101,7 @@ const IndexPage = ({ data }) => {
   }
 
   return (
-    <Layout customClassName="reading">
+    <Layout customClassName="reading" categoryInitializer={categoryInitializer}>
       <Seo title="읽을거리" />
       <Category
         subCategorys={categories}

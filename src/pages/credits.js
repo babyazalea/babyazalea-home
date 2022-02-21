@@ -1,6 +1,7 @@
 import React from "react";
 
 import Layout from "../components/layout/Layout";
+import Seo from "../components/seo/seo";
 
 import gatsbyLogo from "../images/logos/Gatsby-Logo.svg";
 import tailwindCssLogo from "../images/logos/tailwindcss-logotype.svg";
@@ -12,6 +13,7 @@ import { faFontAwesome } from "@fortawesome/free-regular-svg-icons";
 const Credits = () => {
   return (
     <Layout isCredits="true">
+      <Seo title="credits" />
       <div className="w-full h-full flex flex-col items-center justify-center font-sans font-light mb-12">
         <ul className="w-4/12 flex flex-col gap-10 justify-center">
           <li className="flex justify-center">
@@ -21,7 +23,11 @@ const Credits = () => {
           </li>
           <li className="flex justify-center">
             <a className="w-fit h-fit" href="https://tailwindcss.com/">
-              <img className="w-60 h-20 sm:60" src={tailwindCssLogo} alt="Tailwind-css Logo" />
+              <img
+                className="w-60 h-20 sm:60"
+                src={tailwindCssLogo}
+                alt="Tailwind-css Logo"
+              />
             </a>
           </li>
           <li className="flex justify-center">
