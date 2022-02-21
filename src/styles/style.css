@@ -1,5 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+article {
+    word-break: keep-all;
+}
+
+.blog-post-title {
+    word-break: keep-all;
+}
+
+.gatsby-highlight {
+    width: 100%;
+}

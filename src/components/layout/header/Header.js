@@ -7,7 +7,7 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 const Header = () => {
   return (
     <header className="w-full h-24">
-      <nav className="flex flex-row items-center w-full h-24 justify-between px-10 sm:p-0 sm:justify-around sm:gap-x-32 md:justify-around lg:justify-evenly">
+      <nav className="flex flex-row items-center w-full h-24 justify-between px-10 md:p-0 md:gap-x-32 md:justify-around lg:justify-evenly">
         <div className="logo">
           <Link to="/">
             <div>

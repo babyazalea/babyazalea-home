@@ -2,26 +2,33 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      serif: ["Noto Serif KR"],
+      sans: ["Noto Sans KR"],
     },
     extend: {
-      typography: () => ({
+      typography: {
         DEFAULT: {
           css: {
-            code: {
-              padding: "0.5rem",
-              boxSizing: "border-box",
-              borderRadius: "0.3rem",
-              "&:after": {
-                display: "none"
-              },
-              "&:before": {
-                display: "none"
-              }
+            p: {
+              fontWeight: 300,
             },
+            code: {
+              color: "#495057",
+              backgroundColor: "#e9ecef",
+              borderRadius: "0.5rem",
+              padding: "0.3rem",
+              "&:before": {
+                display: "none",
+              },
+              "&:after": {
+                display: "none",
+              },
+            },
+            strong: {
+              fontWeight: 400,
+            }
           },
         },
-      }),
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

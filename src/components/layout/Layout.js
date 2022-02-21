@@ -4,10 +4,12 @@ import Header from "./header/Header";
 import Main from "./main/Main";
 
 const Layout = (props) => {
+  console.log(props.isBlogPost);
+
   return (
-    <div className="flex flex-col w-full h-screen p-0 m-0">
+    <div className="flex flex-col w-screen h-screen p-0 m-0 font-sans">
       <Header />
-      <Main>{props.children}</Main>
+      <Main isBlogPost={props.isBlogPost}>{props.children}</Main>
     </div>
   );
 };

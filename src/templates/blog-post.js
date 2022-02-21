@@ -24,31 +24,23 @@ export const query = graphql`
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
 
+  const createdAt = new Date(post.frontmatter.date);
+
   return (
-    <Layout customClassName="post-template">
+    <Layout isBlogPost="true">
       <Seo title={post.frontmatter.title} />
-      <div className="blog-post-wrapper">
-        <div className="blog-post-caption">
-          <h1>{post.frontmatter.title}</h1>
-          <span>{post.frontmatter.date}</span>
+      <div className="w-full flex flex-col items-center">
+        <div className="w-11/12 sm:w-fit mb-16 flex flex-col items-center">
+          <p className="blog-post-title mb-10 text-xl sm:text-xl font-semibold italic">{post.frontmatter.title}</p>
+          <span className="text-sm">
+            {createdAt.getFullYear()}년 {createdAt.getMonth() + 1}월{" "}
+            {createdAt.getDate()}일
+          </span>
         </div>
         <article
-          className="prose prose-gray"
+          className="prose prose-gray w-11/12 prose:code:text-black"
           dangerouslySetInnerHTML={{ __html: post.html }}
-        >
-          {/*<section*/}
-          {/*  className="blog-post-section"*/}
-
-          {/*  itemProp="articleBody"*/}
-          {/*/>*/}
-          {/*{post.rawMarkdownBody}*/}
-          {/*<h1>Garlic bread with cheese: What the science tells us</h1>*/}
-          {/*<p>*/}
-          {/*  For years parents have espoused the health benefits of eating garlic bread with cheese to their*/}
-          {/*  children, with the food earning such an iconic status in our culture that kids will often dress*/}
-          {/*  up as warm, cheesy loaf for Halloween.*/}
-          {/*</p>*/}
-        </article>
+        />
       </div>
     </Layout>
   );
