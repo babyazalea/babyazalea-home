@@ -29,8 +29,8 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout isBlogPost="true">
       <Seo title={post.frontmatter.title} />
-      <div className="w-full flex flex-col items-center">
-        <div className="w-11/12 sm:w-fit mb-16 flex flex-col items-center">
+      <div className="w-full flex flex-col items-center gap-24">
+        <div className="w-11/12 sm:w-fit flex flex-col items-center">
           <p className="blog-post-title mb-10 text-xl sm:text-xl font-semibold italic">{post.frontmatter.title}</p>
           <span className="text-sm">
             {createdAt.getFullYear()}년 {createdAt.getMonth() + 1}월{" "}
