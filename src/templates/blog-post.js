@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import Seo from "../components/seo/seo";
 
-
 export const query = graphql`
   query PostQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
@@ -34,15 +33,21 @@ const BlogPostTemplate = ({ data }) => {
           <span>{post.frontmatter.date}</span>
         </div>
         <article
-          className="blog-post"
-          itemScope
-          itemType="http://schema.org/Article"
+          className="prose prose-gray"
+          dangerouslySetInnerHTML={{ __html: post.html }}
         >
-          <section
-            className="blog-post-section"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
+          {/*<section*/}
+          {/*  className="blog-post-section"*/}
+
+          {/*  itemProp="articleBody"*/}
+          {/*/>*/}
+          {/*{post.rawMarkdownBody}*/}
+          {/*<h1>Garlic bread with cheese: What the science tells us</h1>*/}
+          {/*<p>*/}
+          {/*  For years parents have espoused the health benefits of eating garlic bread with cheese to their*/}
+          {/*  children, with the food earning such an iconic status in our culture that kids will often dress*/}
+          {/*  up as warm, cheesy loaf for Halloween.*/}
+          {/*</p>*/}
         </article>
       </div>
     </Layout>

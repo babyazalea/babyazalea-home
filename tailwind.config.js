@@ -4,7 +4,25 @@ module.exports = {
     fontFamily: {
       serif: ["Noto Serif KR"],
     },
-    extend: {},
+    extend: {
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            code: {
+              padding: "0.5rem",
+              boxSizing: "border-box",
+              borderRadius: "0.3rem",
+              "&:after": {
+                display: "none"
+              },
+              "&:before": {
+                display: "none"
+              }
+            },
+          },
+        },
+      }),
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
