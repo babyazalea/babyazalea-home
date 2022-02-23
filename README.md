@@ -1,6 +1,16 @@
 # tynage-blog
 
 Gatsby 블로그.
+<br>
+<br>
+
+## 배포
+
+with Gatsby Cloud
+
+[https://tyange.gatsbyjs.io/](https://tyange.gatsbyjs.io/)
+<br>
+<br>
 
 ## 업데이트 내역
 
