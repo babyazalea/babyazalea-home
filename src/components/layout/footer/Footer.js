@@ -1,7 +1,6 @@
 import React from "react";
 
 import githubIcon from "../../../images/logos/github-brands.svg";
-import twitterIcon from "../../../images/logos/twitter-brands.svg";
 
 const Footer = () => {
   return (
@@ -11,11 +10,6 @@ const Footer = () => {
           href="https://github.com/tyange"
         >
           <img className="w-5 opacity-60 hover:opacity-100" src={githubIcon} alt="Github icon" />
-        </a>
-        <a
-          href="https://twitter.com/twit_tyange"
-        >
-          <img className="w-5 opacity-60 hover:opacity-100" src={twitterIcon} alt="Twitter Icon" />
         </a>
       </div>
       <div className="flex items-center gap-1 text-xs">
