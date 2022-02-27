@@ -15,7 +15,7 @@ module.exports = {
               color: "#495057",
               backgroundColor: "#e9ecef",
               borderRadius: "0.5rem",
-              padding: "0.3rem",
+              padding: "0.2rem",
               "&:before": {
                 display: "none",
               },
