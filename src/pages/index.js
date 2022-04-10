@@ -12,7 +12,6 @@ export const query = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         id
-        excerpt
         fields {
           slug
         }
@@ -20,6 +19,7 @@ export const query = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           category
+          description
         }
       }
     }
@@ -109,7 +109,7 @@ const IndexPage = ({ data }) => {
         categoryHandler={categoryHandler}
         categoryInitializer={categoryInitializer}
       />
-      <div className="w-full flex-1 flex flex-col">
+      <div className="flex flex-col flex-1 w-full">
         <PostList readings={showingReadings} />
         {readingsNumber >= 5 && (
           <PageTurner

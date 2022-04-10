@@ -29,16 +29,18 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout isBlogPost="true">
       <Seo title={post.frontmatter.title} />
-      <div className="w-full flex flex-col items-center gap-24">
-        <div className="w-11/12 sm:w-fit flex flex-col items-center">
-          <p className="blog-post-title mb-10 text-xl sm:text-xl font-semibold italic">{post.frontmatter.title}</p>
+      <div className="flex flex-col items-center w-full gap-24">
+        <div className="flex flex-col items-center w-11/12 sm:w-fit">
+          <p className="mb-10 text-xl italic font-semibold blog-post-title sm:text-xl">
+            {post.frontmatter.title}
+          </p>
           <span className="text-sm">
             {createdAt.getFullYear()}년 {createdAt.getMonth() + 1}월{" "}
             {createdAt.getDate()}일
           </span>
         </div>
         <article
-          className="prose prose-gray w-11/12 prose:code:text-black"
+          className="w-11/12 prose"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>

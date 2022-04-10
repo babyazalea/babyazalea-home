@@ -2,9 +2,8 @@
 title: "angular-animation으로 간단한 애니메이션 구현하기"
 date: "2021-12-02T16:19:43.029Z"
 category: "나눠서 더하기"
+description: "앵귤러 애니메이션을 써봅시다."
 ---
-
-
 React는 기본적으로 제공되는 animation-api가 없기 때문에, 서드 파티 패키지를 설치해서 사용해야 합니다. [**ReactTransitionGroup**](https://ko.reactjs.org/docs/animation.html), [**react-spring**](https://react-spring.io) 등등... 이 중에 제가 써본 것은 react-spring인데 패키지를 설치해 사용하는 것인 만큼 사용법을 따로 익히지 않으면 원하는 애니메이션을 구현하기가 무척 까다로웠습니다. 적어도 ReactTransitionGroup은 최근에 React 팀에서 공식적으로 지원하겠다고 밝힌 것을 본 적이 있는데, 아직 정식 버전업에 추가되진 않은 것 같네요.
 
 Angular는 [공식 문서](https://angular.io/guide/animations)에서도 볼 수 있듯이 자체적으로 animation 기능을 구현할 수 있도록 해두었습니다. 이 기능은 Angular 클라이언트(angular client 혹은 ng-cli)로 프로젝트를 구성할 경우 프로젝트 안에 자동으로 포함됩니다. 프로젝트의 루트 모듈에 `BrowserAnimationsModule` 을 추가해주고, 애니메이션을 적용하고 싶은 컴포넌트의 어노테이션에 아래의 코드처럼 `animations` 옵션을 써줍니다.
